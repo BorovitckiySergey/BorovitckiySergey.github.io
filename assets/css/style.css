@@ -1,4 +1,14 @@
-/* Сброс отступов и базовые шрифты */
+/* 1. Цветовые переменные */
+:root {
+  --white: #FFFFFF;
+  --gray-light: #F9F9F9;
+  --gray-dark: #222222;
+  --gray-text: #333333;
+  --accent: #0069ff;   /* твой основной акцентный цвет */
+  --accent-dark: #0053cc;
+}
+
+/* 2. Сброс и базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -8,48 +18,93 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
-  padding: 2rem;
+  color: var(--gray-text);
+  background: var(--white);
+  padding: 20px;           /* отступы по краям экрана */
 }
 
+/* 3. Блок контента (убираем max-width!) */
+/* Всегда отступы вокруг контента */
+body {
+  padding: 20px;
+}
+
+/* На любых экранах контент занимает 100% */
 main {
-  max-width: 700px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  padding: 0;
+  background: var(--white);
 }
 
+/* На экранах от 900px и шире — ограничиваем ширину до 800px и центрируем */
+@media (min-width: 900px) {
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* 4. Заголовки */
 h1 {
+  color: var(--gray-dark);
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--gray-dark);
+  padding-bottom: 0.5em;
 }
 
-p {
-  margin-bottom: 1rem;
+h2, h3, h4 {
+  margin: 1em 0 0.5em;
+  color: var(--gray-dark);
 }
 
-/* Картинки внутри <main> не больше 100% ширины блока */
-main img {
+/* 5. Параграфы и списки */
+p, li {
+  margin-bottom: 1em;
+}
+
+/* 6. Картинки во всю ширину текста */
+img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1rem auto; /* выравнивает по центру, если нужно */
+  margin: 1em 0;
 }
 
+/* 7. Кнопка (базовый вид) */
 .button {
-  display: inline-block;       /* превратить ссылку в строчно-блочный элемент */
-  padding: 0.75rem 1.5rem;      /* вертикальные и горизонтальные отступы */
-  background-color: #0069ff;    /* фон кнопки */
-  color: #ffffff;              /* цвет текста */
-  text-decoration: none;       /* убрать подчёркивание */
-  font-weight: bold;           /* сделать текст более насыщенным */
-  border-radius: 0.5rem;       /* скругление углов */
-  transition: background 0.2s; /* плавный переход при наведении */
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  margin: 1em 0;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #0053cc;   /* более тёмный фон при ховере/фокусе */
+  background-color: var(--accent-dark);
+}
+
+/* 8. Дополнительные секции */
+section {
+  margin: 2em 0;
+}
+
+/* Стили для блоков цитат */
+blockquote {
+  margin: 1em 0;                     /* отступы лишь сверху и снизу */
+  padding: 0.5em 1em;                /* паддинги внутри (верх/низ 0.5em) */
+  border-left: 2px solid var(--accent);
+  background: var(--gray-light);
+  font-style: italic;
+  color: var(--gray-dark);
+}
+
+/* убираем автоматические отступы у <p> внутри цитаты */
+blockquote p {
+  margin: 0;
 }
