@@ -30,3 +30,26 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Картинки внутри <main> не больше 100% ширины блока */
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto; /* выравнивает по центру, если нужно */
+}
+
+.button {
+  display: inline-block;       /* превратить ссылку в строчно-блочный элемент */
+  padding: 0.75rem 1.5rem;      /* вертикальные и горизонтальные отступы */
+  background-color: #0069ff;    /* фон кнопки */
+  color: #ffffff;              /* цвет текста */
+  text-decoration: none;       /* убрать подчёркивание */
+  font-weight: bold;           /* сделать текст более насыщенным */
+  border-radius: 0.5rem;       /* скругление углов */
+  transition: background 0.2s; /* плавный переход при наведении */
+}
+
+.button:hover,
+.button:focus {
+  background-color: #0053cc;   /* более тёмный фон при ховере/фокусе */
+}

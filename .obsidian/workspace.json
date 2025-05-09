@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "lead-magnet"
             }
+          },
+          {
+            "id": "dd744d3aa96a72e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pages/Подписная для психологов.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Подписная для психологов"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -183,12 +197,20 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "00100ff75c8560fb",
+  "active": "dd744d3aa96a72e7",
   "lastOpenFiles": [
+    "_site/assets/images/ChatGPT_Image_psy.png",
+    "_site/assets/images",
+    "_site/psy-chatgpt/index.html",
+    "_site/psy-chatgpt",
+    "assets/images/ChatGPT_Image_psy.png",
+    "pages/Подписная для психологов.md",
+    "assets/images/ChatGPT Image 9 мая 2025 г., 12_03_57.png.crdownload",
+    "assets/images",
+    "pages/lead-magnet.md",
     "_site/{{slug}}/index.html",
     "_site/{{slug}}",
     "Templates/Свойство лендинга.md",
-    "pages/lead-magnet.md",
     "Templates"
   ]
 }
