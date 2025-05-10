@@ -43,7 +43,7 @@
               "state": {
                 "file": "pages/Подписная для психологов.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Подписная для психологов"
@@ -199,18 +199,21 @@
   },
   "active": "dd744d3aa96a72e7",
   "lastOpenFiles": [
+    "_site/Запушить на GitHub.lnk",
+    "Запушить на GitHub.lnk",
+    "_site/deploy-open.bat — ярлык.lnk",
+    "deploy-open.bat — ярлык.lnk",
+    "_site/Запустить локалку.lnk",
+    "Запустить локалку.lnk",
+    "_site/serve-open.bat — ярлык.lnk",
+    "serve-open.bat — ярлык.lnk",
+    "_layouts/default.html",
+    "_layouts/Неподтверждено 933067.crdownload",
+    "_site/serve-open.bat",
     "_site/assets/images/ChatGPT_Image_psy.png",
-    "_site/assets/images",
-    "_site/psy-chatgpt/index.html",
-    "_site/psy-chatgpt",
     "assets/images/ChatGPT_Image_psy.png",
     "pages/Подписная для психологов.md",
-    "assets/images/ChatGPT Image 9 мая 2025 г., 12_03_57.png.crdownload",
-    "assets/images",
     "pages/lead-magnet.md",
-    "_site/{{slug}}/index.html",
-    "_site/{{slug}}",
-    "Templates/Свойство лендинга.md",
-    "Templates"
+    "Templates/Свойство лендинга.md"
   ]
 }
