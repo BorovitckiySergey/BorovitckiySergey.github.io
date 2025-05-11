@@ -57,7 +57,7 @@
               "state": {
                 "file": "pages/Лид-магниты/Подписная для психологов.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Подписная для психологов"

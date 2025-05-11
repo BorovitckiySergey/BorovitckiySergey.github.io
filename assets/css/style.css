@@ -184,57 +184,59 @@ section {
   line-height: 1.6;
 }
 
-/* 13. Разворачиваемая «цитата» с превью и стрелкой (все тексты без курсива) */
+/* 13. Плавно раскрывающаяся цитата без скруглений, с 2px линией */
+/* --- Разворачиваемая «цитата» без скруглений, с 2px линией, плавной анимацией --- */
 .details-quote {
-  border-left: 2px solid var(--accent);
-  background: var(--gray-light);
-  border-radius: 0px;
+  position: relative;
   margin: 1rem 0;
+  padding-left: 0.75rem;
+  background: var(--gray-light);
+  border-left: 2px solid var(--accent);
+  border-radius: 0;
   overflow: hidden;
 }
 
-/* Скрываем дефолтный маркер и задаём кликабельную область */
+/* Убираем маркер браузера и задаём область клика */
 .details-quote summary {
-  list-style: none;
-  padding: 1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;    /* превью — ровно 3 строки */
+  overflow: hidden;
   cursor: pointer;
+  padding: 1rem;
+  color: var(--gray-dark);
+  list-style: none;
+  transition: max-height 0.5s ease;
 }
 .details-quote summary::-webkit-details-marker {
   display: none;
 }
 
-/* Превью: показываем ровно 3 строки, остальное скрыто (без курсива) */
-.details-quote .preview {
-  margin: 0;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* число видимых строк */
-  overflow: hidden;
-  color: var(--gray-dark);
-}
-
-/* Стрелка внизу справа */
+/* Стрелка справа */
 .details-quote summary::after {
   content: "▼";
   float: right;
   color: var(--accent);
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
 }
 
-/* Полный текст — скрыт по умолчанию (тоже без курсива) */
-.details-quote .full-text {
-  display: none;
-  padding: 0 1rem 1rem;
-  color: var(--gray-dark);
+/* Плавное раскрытие абзацев */
+.details-quote p {
+  max-height: 0;
+  margin: 0;
+  padding: 0 1rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease, margin 0.5s ease;
 }
 
-/* При раскрытии: прячем превью, показываем полный текст и поворачиваем стрелку */
+/* Состояние «open» */
+.details-quote[open] summary {
+  -webkit-line-clamp: none; /* показываем весь summary-текст */
+}
 .details-quote[open] summary::after {
   transform: rotate(180deg);
 }
-.details-quote[open] .preview {
-  display: none;
-}
-.details-quote[open] .full-text {
-  display: block;
+.details-quote[open] p {
+  max-height: 100vh;
+  margin: 0.5rem 0;
 }
