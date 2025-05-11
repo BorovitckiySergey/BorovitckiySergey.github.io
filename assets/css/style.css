@@ -184,16 +184,16 @@ section {
   line-height: 1.6;
 }
 
-/* 13. Разворачиваемая «цитата» с превью и стрелкой */
+/* 13. Разворачиваемая «цитата» с превью и стрелкой (все тексты без курсива) */
 .details-quote {
-  border-left: 4px solid var(--accent);
+  border-left: 2px solid var(--accent);
   background: var(--gray-light);
-  border-radius: 2px;
+  border-radius: 0px;
   margin: 1rem 0;
   overflow: hidden;
 }
 
-/* Убираем нативный маркер и делаем область клика */
+/* Скрываем дефолтный маркер и задаём кликабельную область */
 .details-quote summary {
   list-style: none;
   padding: 1rem;
@@ -203,14 +203,13 @@ section {
   display: none;
 }
 
-/* Превью: показываем ровно 3 строки, остальное скрыто */
+/* Превью: показываем ровно 3 строки, остальное скрыто (без курсива) */
 .details-quote .preview {
   margin: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3; /* число видимых строк */
   overflow: hidden;
-  font-style: italic;
   color: var(--gray-dark);
 }
 
@@ -222,7 +221,7 @@ section {
   transition: transform 0.2s;
 }
 
-/* Полный текст — скрыт по умолчанию */
+/* Полный текст — скрыт по умолчанию (тоже без курсива) */
 .details-quote .full-text {
   display: none;
   padding: 0 1rem 1rem;
