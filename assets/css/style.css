@@ -108,3 +108,40 @@ blockquote {
 blockquote p {
   margin: 0;
 }
+
+/* Только для layout: lead */
+.layout-lead .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.layout-lead h1 {
+  font-family: 'Playfair Display', serif;
+  border-bottom: none; /* Убираем границу */
+}
+
+.layout-lead body {
+  font-family: 'PT Serif', serif;
+  line-height: 1.6;
+}
+
+/* Фикс для Typebase + ваших стилей */
+.layout-lead .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.layout-lead body {
+  font-family: Arial, sans-serif; /* Ваш шрифт */
+  line-height: 1.6; /* Ваш интервал */
+}
+
+/* Переопределение Typebase */
+.layout-lead h1,
+.layout-lead h2 {
+  font-family: 'Playfair Display', serif;
+  border-bottom: 1px solid var(--gray-dark); /* Ваша граница */
+  padding-bottom: 0.5em;
+}

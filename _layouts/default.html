@@ -4,20 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page.title }}</title>
+  <!-- Подключаем Typebase.css -->
+  <link rel="stylesheet" href="https://unpkg.com/typebase.css@1.1.0/typebase.min.css">
+  <!-- Ваши кастомные стили -->
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <!-- Опционально: Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      {% for p in site.pages %}
-        {% if p.nav_exclude != true and p.title %}
-          <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
-  </header>
-  <main>
-    {{ content }}
-  </main>
+  <div class="container">
+    <main>
+      {{ content }}
+    </main>
+  </div>
 </body>
 </html>
