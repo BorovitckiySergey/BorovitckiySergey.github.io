@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/test-lead.md",
+                "file": "pages/Лид-магниты/Подписная для психологов.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test-lead"
+              "title": "Подписная для психологов"
             }
           }
         ],
@@ -213,8 +213,8 @@
   },
   "active": "cbcfd947c86f6780",
   "lastOpenFiles": [
-    "pages/Лид-магниты/Подписная для психологов.md",
     "pages/test-lead.md",
+    "pages/Лид-магниты/Подписная для психологов.md",
     "_site/jekyll/update/2025/05/09/welcome-to-jekyll.html",
     "_site/jekyll/update/2025/05/09",
     "_site/jekyll/update/2025/05",
