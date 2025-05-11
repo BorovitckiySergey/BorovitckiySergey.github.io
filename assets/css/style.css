@@ -1,42 +1,65 @@
-/* 1. Цветовые переменные */
+/* 0. Р–РР”РљРђРЇ РўРРџРћР“Р РђР¤РРљРђ: Р±Р°Р·РѕРІС‹Р№ С€СЂРёС„С‚ 16px РЅР° РґРµСЃРєС‚РѕРїРµ, 18px РЅР° РјРѕР±РёР»СЊРЅС‹С… */
+html {
+  font-size: 1rem; /* 16px */
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* 1. Р¦РІРµС‚РѕРІС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ */
 :root {
   --white: #FFFFFF;
   --gray-light: #F9F9F9;
   --gray-dark: #222222;
   --gray-text: #333333;
-  --accent: #0069ff;   /* твой основной акцентный цвет */
-  --accent-dark: #0053cc;
+
+  /* РћСЂР°РЅР¶РµРІС‹Р№ Р°РєС†РµРЅС‚ */
+  --accent: #d35400;
+  --accent-dark: #e67e22;
+
+  /* РўРёРїРѕРіСЂР°С„РёРєР° */
+  --font-base: 1rem;      /* 1rem = font-size html */
+  --scale-ratio: 1.25;    /* С€Р°Рі РјРѕРґСѓР»СЊРЅРѕР№ С€РєР°Р»С‹ */
+
+  /* РћС‚СЃС‚СѓРїС‹ */
+  --space-unit: 1rem;     /* 16px */
 }
 
-/* 2. Сброс и базовые стили */
-* {
+/* 2. Р’С‹С‡РёСЃР»РµРЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹ Р·Р°РіРѕР»РѕРІРєРѕРІ */
+:root {
+  --font-h4: var(--font-base);
+  --font-h3: calc(var(--font-h4) * var(--scale-ratio));
+  --font-h2: calc(var(--font-h3) * var(--scale-ratio));
+  --font-h1: calc(var(--font-h2) * var(--scale-ratio));
+}
+
+/* 3. РЎР±СЂРѕСЃ Рё Р±Р°Р·РѕРІС‹Рµ СЃС‚РёР»Рё */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray-text);
   background: var(--white);
-  padding: 20px;           /* отступы по краям экрана */
-}
-
-/* 3. Блок контента (убираем max-width!) */
-/* Всегда отступы вокруг контента */
-body {
   padding: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* На любых экранах контент занимает 100% */
-main {
+/* 4. РљРѕРЅС‚РµР№РЅРµСЂ */
+main, .container {
   width: 100%;
   padding: 0;
   background: var(--white);
 }
 
-/* На экранах от 900px и шире — ограничиваем ширину до 800px и центрируем */
 @media (min-width: 900px) {
   main {
     max-width: 800px;
@@ -44,44 +67,78 @@ main {
   }
 }
 
-/* 4. Заголовки */
-h1 {
+/* 5. Р—Р°РіРѕР»РѕРІРєРё */
+h1, h2, h3, h4 {
+  font-family: 'Manrope', sans-serif;
   color: var(--gray-dark);
-  font-size: 2rem;
-  margin-bottom: 0.5em;
+  line-height: 1.2;
+  margin-bottom: var(--space-unit);
+}
+
+h1 {
+  font-size: var(--font-h1);
+  margin-top: calc(var(--space-unit) * 2);
   border-bottom: 1px solid var(--gray-dark);
   padding-bottom: 0.5em;
 }
 
-h2, h3, h4 {
-  margin: 1em 0 0.5em;
-  color: var(--gray-dark);
+h2 {
+  font-size: var(--font-h2);
+  margin-top: calc(var(--space-unit) * 1.5);
 }
 
-/* 5. Параграфы и списки */
+h3 {
+  font-size: var(--font-h3);
+  margin-top: calc(var(--space-unit) * 1.2);
+}
+
+h4 {
+  font-size: var(--font-h4);
+}
+
+/* 6. Fluid Р·Р°РіРѕР»РѕРІРєРё РЅР° РґРµСЃРєС‚РѕРїРµ */
+@media (min-width: 480px) {
+  h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+  h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+}
+
+/* 7. РџР°СЂР°РіСЂР°С„С‹ Рё СЃРїРёСЃРєРё */
 p, li {
-  margin-bottom: 1em;
+  margin-bottom: calc(var(--space-unit) * 1.2);
 }
 
-/* 6. Картинки во всю ширину текста */
+ul, ol {
+  padding-left: calc(var(--space-unit) * 1.5);
+}
+
+/* 8. РљР°СЂС‚РёРЅРєРё */
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1em 0;
+  margin: calc(var(--space-unit) * 1.5) 0;
+  border-radius: 0;
 }
 
-/* 7. Кнопка (базовый вид) */
+.img-caption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin: calc(var(--space-unit) * -0.5) 0 calc(var(--space-unit) * 1);
+}
+
+/* 9. РљРЅРѕРїРєРё */
 .button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: calc(var(--space-unit) * 0.6) calc(var(--space-unit) * 1.5);
   background-color: var(--accent);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 0.5rem;
   transition: background 0.2s;
-  margin: 1em 0;
+  margin: calc(var(--space-unit) * 1) 0;
 }
 
 .button:hover,
@@ -89,59 +146,96 @@ img {
   background-color: var(--accent-dark);
 }
 
-/* 8. Дополнительные секции */
-section {
-  margin: 2em 0;
-}
-
-/* Стили для блоков цитат */
+/* 10. Р¦РёС‚Р°С‚С‹ */
 blockquote {
-  margin: 1em 0;                     /* отступы лишь сверху и снизу */
-  padding: 0.5em 1em;                /* паддинги внутри (верх/низ 0.5em) */
+  margin: var(--space-unit) 0;
+  padding: 0.5em 1em;
   border-left: 2px solid var(--accent);
   background: var(--gray-light);
   font-style: italic;
   color: var(--gray-dark);
 }
 
-/* убираем автоматические отступы у <p> внутри цитаты */
 blockquote p {
   margin: 0;
 }
 
-/* Только для layout: lead */
+/* 11. Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРµРєС†РёРё */
+section {
+  margin: calc(var(--space-unit) * 2) 0;
+}
+
+/* 12. РЎС‚РёР»Рё РґР»СЏ layout: lead */
 .layout-lead .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: calc(var(--space-unit) * 2);
 }
 
-.layout-lead h1 {
-  font-family: 'Playfair Display', serif;
-  border-bottom: none; /* Убираем границу */
+.layout-lead h1,
+.layout-lead h2 {
+  font-family: 'Manrope', sans-serif;
+  border-bottom: 1px solid var(--gray-dark);
+  padding-bottom: 0.5em;
 }
 
 .layout-lead body {
-  font-family: 'PT Serif', serif;
+  font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
 }
 
-/* Фикс для Typebase + ваших стилей */
-.layout-lead .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+/* 13. Р Р°Р·РІРѕСЂР°С‡РёРІР°РµРјР°СЏ В«С†РёС‚Р°С‚Р°В» СЃ РїСЂРµРІСЊСЋ Рё СЃС‚СЂРµР»РєРѕР№ */
+.details-quote {
+  border-left: 4px solid var(--accent);
+  background: var(--gray-light);
+  border-radius: 2px;
+  margin: 1rem 0;
+  overflow: hidden;
 }
 
-.layout-lead body {
-  font-family: Arial, sans-serif; /* Ваш шрифт */
-  line-height: 1.6; /* Ваш интервал */
+/* РЈР±РёСЂР°РµРј РЅР°С‚РёРІРЅС‹Р№ РјР°СЂРєРµСЂ Рё РґРµР»Р°РµРј РѕР±Р»Р°СЃС‚СЊ РєР»РёРєР° */
+.details-quote summary {
+  list-style: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+.details-quote summary::-webkit-details-marker {
+  display: none;
 }
 
-/* Переопределение Typebase */
-.layout-lead h1,
-.layout-lead h2 {
-  font-family: 'Playfair Display', serif;
-  border-bottom: 1px solid var(--gray-dark); /* Ваша граница */
-  padding-bottom: 0.5em;
+/* РџСЂРµРІСЊСЋ: РїРѕРєР°Р·С‹РІР°РµРј СЂРѕРІРЅРѕ 3 СЃС‚СЂРѕРєРё, РѕСЃС‚Р°Р»СЊРЅРѕРµ СЃРєСЂС‹С‚Рѕ */
+.details-quote .preview {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* С‡РёСЃР»Рѕ РІРёРґРёРјС‹С… СЃС‚СЂРѕРє */
+  overflow: hidden;
+  font-style: italic;
+  color: var(--gray-dark);
+}
+
+/* РЎС‚СЂРµР»РєР° РІРЅРёР·Сѓ СЃРїСЂР°РІР° */
+.details-quote summary::after {
+  content: "в–ј";
+  float: right;
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+
+/* РџРѕР»РЅС‹Р№ С‚РµРєСЃС‚ вЂ” СЃРєСЂС‹С‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ */
+.details-quote .full-text {
+  display: none;
+  padding: 0 1rem 1rem;
+  color: var(--gray-dark);
+}
+
+/* РџСЂРё СЂР°СЃРєСЂС‹С‚РёРё: РїСЂСЏС‡РµРј РїСЂРµРІСЊСЋ, РїРѕРєР°Р·С‹РІР°РµРј РїРѕР»РЅС‹Р№ С‚РµРєСЃС‚ Рё РїРѕРІРѕСЂР°С‡РёРІР°РµРј СЃС‚СЂРµР»РєСѓ */
+.details-quote[open] summary::after {
+  transform: rotate(180deg);
+}
+.details-quote[open] .preview {
+  display: none;
+}
+.details-quote[open] .full-text {
+  display: block;
 }
