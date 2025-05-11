@@ -1,0 +1,10 @@
+{%- assign btn_text  = include.text  | default: "Нажми сюда" -%}
+{%- assign btn_url   = include.url   | default: "/"             -%}
+{%- assign btn_color = include.color | default: "primary"       -%}
+{%- assign btn_radius= include.radius| default: "md"            -%}
+{%- assign btn_extra = include.extra | default: ""              -%}
+
+<a href="{{ btn_url }}"
+   class="btn btn--{{ btn_color }} rounded-{{ btn_radius }} {{ btn_extra }}">
+  {{ btn_text }}
+</a>

@@ -1,16 +1,15 @@
 @echo off
+:: Переходим в папку сайта
 cd /d E:\BorovitckiySergey.github.io
 
-:: Спрашиваем slug
-set /p SLUG=Enter page slug (e.g. lead-magnet): 
+echo Добавляю все изменения в Git...
+git add .
 
-echo Committing and pushing...
-git add pages\%SLUG%.md
-git commit -m "Deploy %SLUG% – %date% %time%"
+echo Создаю коммит...
+git commit -m "Автодеплой: %date% %time%"
+
+echo Пушу на GitHub…
 git push origin main
 
-:: Ждём, пока GitHub Pages обновится (можно увеличить паузу)
-timeout /t 10 >nul
-
-:: Открываем браузер на «проде»
-start "" "https://BorovitckiySergey.github.io/%SLUG%/"
+echo Готово!
+pause

@@ -8,42 +8,42 @@
         "type": "tabs",
         "children": [
           {
-            "id": "77dd46f192872de1",
+            "id": "59a9986e6a6586fc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/lead-magnet.md",
+                "file": "pages/psy-ai-guide.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "lead-magnet"
+              "title": "psy-ai-guide"
             }
           },
           {
-            "id": "00100ff75c8560fb",
+            "id": "9304451ab39b0f52",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/lead-magnet.md",
+                "file": "_pages/lead_magnets/landing-psy.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "lead-magnet"
+              "title": "landing-psy"
             }
           },
           {
-            "id": "dd744d3aa96a72e7",
+            "id": "fc964e6906220f4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/Подписная для психологов.md",
+                "file": "pages/Лид-магниты/Подписная для психологов.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Подписная для психологов"
@@ -197,23 +197,37 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "dd744d3aa96a72e7",
+  "active": "956ef01e659607cb",
   "lastOpenFiles": [
-    "_site/Запушить на GitHub.lnk",
-    "Запушить на GitHub.lnk",
-    "_site/deploy-open.bat — ярлык.lnk",
-    "deploy-open.bat — ярлык.lnk",
-    "_site/Запустить локалку.lnk",
-    "Запустить локалку.lnk",
-    "_site/serve-open.bat — ярлык.lnk",
-    "serve-open.bat — ярлык.lnk",
-    "_layouts/default.html",
-    "_layouts/Неподтверждено 933067.crdownload",
-    "_site/serve-open.bat",
-    "_site/assets/images/ChatGPT_Image_psy.png",
-    "assets/images/ChatGPT_Image_psy.png",
-    "pages/Подписная для психологов.md",
+    "pages/landing-psy.md",
+    "pages/Лид-магниты/Подписная для психологов.md",
+    "pages/psy-ai-guide.md",
+    "pages/test-lead.md",
+    "_site/jekyll/update/2025/05/09/welcome-to-jekyll.html",
+    "_site/jekyll/update/2025/05/09",
+    "_site/jekyll/update/2025/05",
+    "_site/jekyll/update/2025",
+    "_site/jekyll/update",
+    "_site/jekyll",
+    "_site/psy-chatgpt/index.html",
+    "_site/psy-chatgpt",
+    "_site/pages/test-lead.html",
+    "_site/pages",
     "pages/lead-magnet.md",
+    "_site/assets/images/ChatGPT_Image_psy.png",
+    "_pages/landing-psy.md",
+    "landing-psy.md",
+    "assets/images/ChatGPT_Image_psy.png",
+    "_site/Без названия.md",
+    "_site/assets/images/screenshot.png",
+    "_site/assets/images/pic08.jpg",
+    "_site/assets/images/pic07.jpg",
+    "_site/assets/images/pic06.jpg",
+    "_site/assets/images/pic05.jpg",
+    "_site/assets/images/pic04.jpg",
+    "_site/assets/images/pic03.jpg",
+    "_site/assets/images/pic02.jpg",
+    "_site/pages/Без названия.md",
     "Templates/Свойство лендинга.md"
   ]
 }
