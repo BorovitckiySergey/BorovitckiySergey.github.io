@@ -64,6 +64,7 @@ section {
   padding: 2rem;
   overflow: hidden;
   scroll-snap-align: start;
+  scroll-margin-top: 1px;
 }
 
 /* Заголовки */
@@ -217,25 +218,10 @@ blockquote p {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-
-/* Расширение slide-highlight на всю ширину */
-.slide-highlight {
-  background-color: var(--accent-dark);
-  color: white;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
 .slide-highlight > .container {
   max-width: 100%;
   width: 100%;
 }
-
-/* Обновим цвет заголовков внутри выделенного слайда */
 .slide-highlight h1,
 .slide-highlight h2,
 .slide-highlight h3,
@@ -244,7 +230,7 @@ blockquote p {
   border-color: white;
 }
 
-/* Центрирование контента и заголовка в слайде */
+/* Центрирование контента */
 .slide-centered {
   display: flex;
   flex-direction: column;
