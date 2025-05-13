@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Презентации/Преза для компании по аренде самокатов.md",
+                "file": "Презентации/Преза для компании по аренде электровелосипедов.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Преза для компании по аренде самокатов"
+              "title": "Преза для компании по аренде электровелосипедов"
             }
           }
         ],
@@ -311,6 +311,8 @@
   },
   "active": "d87f1ee3cb87f12b",
   "lastOpenFiles": [
+    "Презентации/Презентация для компании.md",
+    "Презентации/Преза для компании по аренде электровелосипедов.md",
     "_layouts/presentation.html",
     "_layouts/presentation_fixed.html",
     "_layouts/Неподтверждено 56488.crdownload",
@@ -318,9 +320,7 @@
     "assets/css/typography.css",
     "assets/css/typography (1).css.crdownload",
     "_site/assets/images/deepres.png",
-    "Презентации/Презентация для компании.md",
     "Презентации/Преза 3.md",
-    "Презентации/Преза для компании по аренде самокатов.md",
     "_site/deepres.png",
     "_site/Pasted image 20250513224918.png",
     "assets/images/deepres.png",
@@ -330,7 +330,6 @@
     "_site/vnedryaem-gpt",
     "_site/preza-vnedryaem-gpt/index.html",
     "_site/preza-vnedryaem-gpt",
-    "_site/preza-vnedryaemgpt/index.html",
     "_site/Презентации/Преза для компании по аренде самокатов.md",
     "_site/Презентации/Без названия.md",
     "Презентации/Преза 2.md",
