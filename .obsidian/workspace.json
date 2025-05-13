@@ -76,9 +76,23 @@
               "icon": "lucide-file",
               "title": "Подписная для психологов"
             }
+          },
+          {
+            "id": "8526f3eae0cfe17b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -225,16 +239,19 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "c112f39817d52d69",
+  "active": "8526f3eae0cfe17b",
   "lastOpenFiles": [
+    "pages/Лид-магниты/Подписная для психологов.md",
+    "index.md",
     "CNAME",
+    "CNAME.txt",
+    "_site/CNAME",
     "Неподтверждено 210316.crdownload",
     "_site/Templates/Цитата с плашкой сверху.md",
     "Templates/Цитата с плашкой сверху.md",
     "_site/Templates/Без названия.md",
     "_site/Templates",
     "Templates/Свойство лендинга.md",
-    "pages/Лид-магниты/Подписная для психологов.md",
     "pages/lead-magnet.md",
     "pages/test-lead.md",
     "_site/jekyll/update/2025/05/09/welcome-to-jekyll.html",
@@ -242,9 +259,6 @@
     "_site/jekyll/update/2025/05",
     "_site/jekyll/update/2025",
     "_site/jekyll/update",
-    "_site/jekyll",
-    "_site/Запушить на GitHub.lnk",
-    "_site/Запустить локалку.lnk",
     "_site/assets/images/ChatGPT_Image_psy.png",
     "pages/psy-ai-guide.md",
     "_site/pages/Лид-магниты/Без названия.md",
