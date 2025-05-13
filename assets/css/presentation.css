@@ -1,0 +1,55 @@
+/* Стили для презентации в стиле ChatGPT */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #202123;
+  color: #ececec;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: #202123;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #d35400;
+}
+
+p {
+  font-size: 1.25rem;
+  max-width: 600px;
+}
+
+.nav-buttons {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.nav-buttons button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ececec;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

@@ -1,0 +1,254 @@
+/* typography.css — структура, типографика, отступы, scroll-snap */
+
+/* 0. ЖИДКАЯ ТИПОГРАФИКА */
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 1.125rem;
+  }
+}
+
+/* 1. Переменные */
+:root {
+  --font-base: 1rem;
+  --scale: 1.25;
+  --space: 1rem;
+}
+
+/* 2. Размеры заголовков */
+:root {
+  --h4: var(--font-base);
+  --h3: calc(var(--h4) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h1: calc(var(--h2) * var(--scale));
+}
+
+/* 3. Базовые стили */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: var(--font-base);
+  line-height: 1.6;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Контейнер */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space);
+}
+
+/* Секция */
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+/* Заголовки */
+h1, h2, h3, h4 {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.2;
+  margin-bottom: calc(var(--space) * 2);
+}
+h1 {
+  font-size: var(--h1);
+  margin-top: calc(var(--space) * 2);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.5em;
+}
+h2 {
+  font-size: var(--h2);
+  margin-top: calc(var(--space) * 1.5);
+}
+h3 {
+  font-size: var(--h3);
+  margin-top: calc(var(--space) * 1.2);
+}
+h4 {
+  font-size: var(--h4);
+}
+@media (min-width: 480px) {
+  h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+  h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+}
+
+/* Параграфы и списки */
+p, li {
+  margin-bottom: calc(var(--space) * 1.2);
+  margin-top: 1.25rem;
+}
+ul, ol {
+  padding-left: calc(var(--space) * 1.5);
+  margin-top: 1.25rem;
+}
+
+/* Изображения */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: calc(var(--space) * 1.5) 0;
+}
+
+/* Кнопки */
+.nav-buttons {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 10;
+}
+.nav-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Цитаты */
+blockquote {
+  margin: var(--space) 0;
+  padding: 0.5em 1em;
+  border-left: 2px solid currentColor;
+  font-style: italic;
+}
+blockquote p {
+  margin: 0;
+}
+
+/* .fig-wrap — изображение с подписью */
+.fig-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+.fig-wrap img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.fig-wrap figcaption {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 60%;
+}
+
+/* Выравнивание изображения */
+.align-left img {
+  margin-left: 0;
+  margin-right: auto;
+}
+.align-center img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.align-right img {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Lightbox просмотр изображений */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.lightbox:target {
+  display: flex;
+}
+.lightbox-bg {
+  position: fixed;
+  inset: 0;
+}
+
+/* Заголовочный слайд без полосы и отступа */
+.headline-only h1 {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Контрастный фон для выделенного слайда */
+.slide-highlight {
+  background-color: var(--accent-dark);
+  color: white;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Расширение slide-highlight на всю ширину */
+.slide-highlight {
+  background-color: var(--accent-dark);
+  color: white;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.slide-highlight > .container {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Обновим цвет заголовков внутри выделенного слайда */
+.slide-highlight h1,
+.slide-highlight h2,
+.slide-highlight h3,
+.slide-highlight h4 {
+  color: white;
+  border-color: white;
+}
+
+/* Центрирование контента и заголовка в слайде */
+.slide-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

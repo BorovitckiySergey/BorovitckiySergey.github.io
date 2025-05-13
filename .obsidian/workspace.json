@@ -90,9 +90,79 @@
               "icon": "lucide-file",
               "title": "index"
             }
+          },
+          {
+            "id": "5f68a75a57d4838d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Цитата с плашкой сверху.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Цитата с плашкой сверху"
+            }
+          },
+          {
+            "id": "f7206e848a5f8db4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Презентации/Презентация для компании.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Презентация для компании"
+            }
+          },
+          {
+            "id": "3b362e111edc8fc0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Презентации/Презентация для компании.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Презентация для компании"
+            }
+          },
+          {
+            "id": "e45f111c66c8a7dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Презентации/Преза 3.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Преза 3"
+            }
+          },
+          {
+            "id": "d87f1ee3cb87f12b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Презентации/Преза для компании по аренде самокатов.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Преза для компании по аренде самокатов"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -239,33 +309,42 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "8526f3eae0cfe17b",
+  "active": "d87f1ee3cb87f12b",
   "lastOpenFiles": [
+    "_site/assets/css/typography.css",
+    "assets/css/typography.css",
+    "_site/vnedryaem-gpt/index.html",
+    "_site/vnedryaem-gpt",
+    "_site/preza-vnedryaem-gpt/index.html",
+    "_site/preza-vnedryaem-gpt",
+    "_site/preza-vnedryaemgpt/index.html",
+    "_site/preza-vnedryaemgpt",
+    "_site/preza-vnedryagpt/index.html",
+    "_site/preza-vnedryagpt",
+    "_site/preza-vnedgpt/index.html",
+    "Презентации/Презентация для компании.md",
+    "Презентации/Преза для компании по аренде самокатов.md",
+    "_site/Презентации/Преза для компании по аренде самокатов.md",
+    "_site/Презентации/Без названия.md",
+    "Презентации/Преза 3.md",
+    "Презентации/Преза 2.md",
+    "Templates/Вставить изображение.md",
+    "assets/images/ChatGPT_Image_psy.png",
+    "_site/Templates/Вставить изображение.md",
+    "_site/Templates/Без названия.md",
+    "Templates/Цитата с плашкой сверху.md",
     "pages/Лид-магниты/Подписная для психологов.md",
     "index.md",
-    "CNAME",
-    "CNAME.txt",
-    "_site/CNAME",
-    "Неподтверждено 210316.crdownload",
     "_site/Templates/Цитата с плашкой сверху.md",
-    "Templates/Цитата с плашкой сверху.md",
-    "_site/Templates/Без названия.md",
-    "_site/Templates",
     "Templates/Свойство лендинга.md",
     "pages/lead-magnet.md",
     "pages/test-lead.md",
-    "_site/jekyll/update/2025/05/09/welcome-to-jekyll.html",
-    "_site/jekyll/update/2025/05/09",
-    "_site/jekyll/update/2025/05",
-    "_site/jekyll/update/2025",
-    "_site/jekyll/update",
     "_site/assets/images/ChatGPT_Image_psy.png",
     "pages/psy-ai-guide.md",
     "_site/pages/Лид-магниты/Без названия.md",
     "pages/landing-psy.md",
     "_pages/landing-psy.md",
     "landing-psy.md",
-    "assets/images/ChatGPT_Image_psy.png",
     "_site/Без названия.md",
     "_site/assets/images/screenshot.png",
     "_site/assets/images/pic08.jpg",

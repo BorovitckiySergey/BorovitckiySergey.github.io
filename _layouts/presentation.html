@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  {% assign theme = page.theme | default: "light" %}
+  {% if theme == "dark" %}
+    <link rel="stylesheet" href="/assets/css/presentation-dark.css">
+  {% else %}
+    <link rel="stylesheet" href="/assets/css/presentation-light.css">
+  {% endif %}
+</head>
+<body>
+  {% assign slides = content | split: '<hr />' %}
+  {% for slide in slides %}
+    <section>
+      <div class="container">
+        {{ slide | strip }}
+      </div>
+    </section>
+  {% endfor %}
+
+  <div class="nav-buttons">
+    <button onclick="navigateSlide(-1)">← Назад</button>
+    <button onclick="navigateSlide(1)">Вперёд →</button>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    let currentIndex = 0;
+
+    function navigateSlide(direction) {
+      currentIndex = Math.max(0, Math.min(sections.length - 1, currentIndex + direction));
+      sections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const index = Array.from(sections).findIndex(s => '#' + s.id === hash);
+        if (index >= 0) currentIndex = index;
+      }
+    });
+  </script>
+</body>
+</html>

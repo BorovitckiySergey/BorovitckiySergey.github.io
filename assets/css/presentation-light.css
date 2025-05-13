@@ -1,0 +1,33 @@
+:root {
+  --accent: #d35400;
+  --accent-dark: #e67e22;
+  --gray-dark: #222;
+  --gray-light: #f9f9f9;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  background-color: #ffffff;
+  color: #111;
+}
+
+h1, h2, h3, h4 {
+  color: var(--accent);
+}
+
+blockquote {
+  border-left: 2px solid var(--accent);
+}
+
+.nav-buttons button {
+  background: rgba(0, 0, 0, 0.05);
+  color: #111;
+}
+.nav-buttons button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
