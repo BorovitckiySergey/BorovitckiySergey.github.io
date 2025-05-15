@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  {% assign theme = page.theme | default: "light" %}
+  {% if theme == "dark" %}
+    <link rel="stylesheet" href="/assets/css/presentation-dark.css">
+  {% else %}
+    <link rel="stylesheet" href="/assets/css/presentation-light.css">
+  {% endif %}
+  <style>
+    html, body {
+      overflow: hidden;
+      height: 100%;
+      margin: 0;
+    }
+    .slide-container {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    section {
+      height: 100vh;
+      scroll-snap-align: start;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container" id="slideContainer">
+    {% assign slides = content | split: '<hr />' %}
+    {% for slide in slides %}
+      <section>
+        <div class="container">
+          {{ slide | strip }}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+
+  <div class="nav-buttons">
+    <button onclick="navigateSlide(-1)">← Назад</button>
+    <button onclick="navigateSlide(1)">Вперёд →</button>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    let currentIndex = 0;
+    let isScrolling = false;
+
+    function navigateSlide(direction) {
+      if (isScrolling) return;
+      const nextIndex = Math.max(0, Math.min(sections.length - 1, currentIndex + direction));
+      if (nextIndex !== currentIndex) {
+        isScrolling = true;
+        currentIndex = nextIndex;
+        sections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Observer отслеживает, когда слайд полностью в фокусе — и снимает блокировку
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target);
+          if (index === currentIndex) {
+            isScrolling = false;
+          }
+        }
+      });
+    }, { threshold: 0.6 }); // минимум 60% слайда должно быть видно
+
+    sections.forEach(section => observer.observe(section));
+
+    // Навигация колесом мыши
+    window.addEventListener('wheel', (e) => {
+      if (e.deltaY > 30) {
+        e.preventDefault();
+        navigateSlide(1);
+      } else if (e.deltaY < -30) {
+        e.preventDefault();
+        navigateSlide(-1);
+      }
+    }, { passive: false });
+
+    // Навигация по свайпу
+    let touchStartY = 0;
+    window.addEventListener('touchstart', (e) => {
+      touchStartY = e.changedTouches[0].clientY;
+    });
+    window.addEventListener('touchend', (e) => {
+      const deltaY = e.changedTouches[0].clientY - touchStartY;
+      if (deltaY < -50) {
+        navigateSlide(1);
+      } else if (deltaY > 50) {
+        navigateSlide(-1);
+      }
+    });
+
+    // Навигация по клавиатуре
+    window.addEventListener('keydown', (e) => {
+      const tag = document.activeElement.tagName.toLowerCase();
+      if (tag === 'input' || tag === 'textarea') return;
+      switch (e.key) {
+        case 'ArrowDown':
+        case 'PageDown':
+        case ' ':
+          e.preventDefault();
+          navigateSlide(1);
+          break;
+        case 'ArrowUp':
+        case 'PageUp':
+          e.preventDefault();
+          navigateSlide(-1);
+          break;
+      }
+    });
+  </script>
+</body>
+</html>

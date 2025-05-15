@@ -43,6 +43,25 @@
         if (index >= 0) currentIndex = index;
       }
     });
+
+    window.addEventListener('keydown', (e) => {
+      const tag = document.activeElement.tagName.toLowerCase();
+      if (tag === 'input' || tag === 'textarea') return;
+
+      switch (e.key) {
+        case 'ArrowDown':
+        case 'PageDown':
+        case ' ':
+          e.preventDefault();
+          navigateSlide(1);
+          break;
+        case 'ArrowUp':
+        case 'PageUp':
+          e.preventDefault();
+          navigateSlide(-1);
+          break;
+      }
+    });
   </script>
 </body>
 </html>
