@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/typography.css" />
   {% assign theme = page.theme | default: "light" %}
   {% if theme == "dark" %}
-    <link rel="stylesheet" href="/assets/css/presentation-dark.css">
+    <link rel="stylesheet" href="/assets/css/presentation-dark.css" />
   {% else %}
-    <link rel="stylesheet" href="/assets/css/presentation-light.css">
+    <link rel="stylesheet" href="/assets/css/presentation-light.css" />
   {% endif %}
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
       overflow: hidden;
     }
@@ -27,6 +28,56 @@
 
     section {
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      scroll-snap-align: start;
+    }
+
+    section.visible {
+      opacity: 1;
+    }
+
+    .nav-panel {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      z-index: 10;
+      background: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+    }
+
+    .nav-panel button {
+      background: rgba(255, 255, 255, 0.1);
+      color: inherit;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .nav-panel button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-panel span {
+      color: white;
+      font-size: 0.9rem;
+      min-width: 3rem;
+      text-align: center;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
     }
 
     @media (max-width: 768px) {
@@ -36,6 +87,7 @@
 
       .slide-container {
         overflow-y: auto;
+        scroll-snap-type: y mandatory;
         scroll-behavior: smooth;
       }
     }
@@ -43,26 +95,42 @@
 </head>
 <body>
   <div class="slide-container" id="slideContainer">
-    {% assign slides = content | split: '<hr />' %}
+    {% assign slides = content | replace: '<hr>', '<hr />' | split: '<hr />' %}
     {% for slide in slides %}
-      <section>
-        <div class="container">
-          {{ slide | strip }}
-        </div>
-      </section>
+      {% assign trimmed = slide | strip %}
+      {% if trimmed contains '/////' %}
+        <section class="slide-highlight slide-centered">
+          <div class="container">
+            <h1>{{ trimmed | remove_first: '/////' | strip }}</h1>
+          </div>
+        </section>
+      {% elsif trimmed != '' %}
+        <section>
+          <div class="container">
+            {{ trimmed | markdownify }}
+          </div>
+        </section>
+      {% endif %}
     {% endfor %}
   </div>
 
-  <div class="nav-buttons">
-    <button onclick="navigateSlide(-1)">← Назад</button>
-    <button onclick="navigateSlide(1)">Вперёд →</button>
+  <div class="nav-panel">
+    <button onclick="navigateSlide(-1)">&lt;</button>
+    <span id="slide-indicator">1 / 1</span>
+    <button onclick="navigateSlide(1)">&gt;</button>
   </div>
 
   <script>
     const sections = document.querySelectorAll("section");
-    const container = document.getElementById("slideContainer");
     let currentIndex = 0;
     let isScrolling = false;
+
+    function showSlide(index) {
+      sections.forEach((s, i) => {
+        s.classList.toggle("visible", i === index);
+      });
+      document.getElementById("slide-indicator").textContent = (index + 1) + ' / ' + sections.length;
+    }
 
     function navigateSlide(direction) {
       if (isScrolling || window.innerWidth <= 768) return;
@@ -70,12 +138,12 @@
       if (nextIndex !== currentIndex) {
         isScrolling = true;
         currentIndex = nextIndex;
+        showSlide(currentIndex);
         sections[currentIndex].scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => isScrolling = false, 400);
       }
     }
 
-    // Десктоп: колесо и клавиши
     window.addEventListener('wheel', (e) => {
       if (window.innerWidth <= 768) return;
       if (e.deltaY > 30) {
@@ -91,35 +159,18 @@
       if (window.innerWidth <= 768) return;
       const tag = document.activeElement.tagName.toLowerCase();
       if (tag === 'input' || tag === 'textarea') return;
-      switch (e.key) {
-        case 'ArrowDown':
-        case 'PageDown':
-        case ' ':
-          e.preventDefault();
-          navigateSlide(1);
-          break;
-        case 'ArrowUp':
-        case 'PageUp':
-          e.preventDefault();
-          navigateSlide(-1);
-          break;
+      if (["ArrowDown", "PageDown", "ArrowRight", " "].includes(e.key)) {
+        e.preventDefault();
+        navigateSlide(1);
+      } else if (["ArrowUp", "PageUp", "ArrowLeft"].includes(e.key)) {
+        e.preventDefault();
+        navigateSlide(-1);
       }
     });
 
-    // 📱 Мобильная: псевдо-снап
-    if (window.innerWidth <= 768) {
-      let scrollTimeout;
-      container.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          const scrollTop = container.scrollTop;
-          const slideHeight = window.innerHeight;
-          const nearestIndex = Math.round(scrollTop / slideHeight);
-          const targetTop = nearestIndex * slideHeight;
-          container.scrollTo({ top: targetTop, behavior: 'smooth' });
-        }, 100);
-      });
-    }
+    window.addEventListener('load', () => {
+      showSlide(currentIndex);
+    });
   </script>
 </body>
 </html>

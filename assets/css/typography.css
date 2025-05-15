@@ -238,3 +238,10 @@ blockquote p {
   align-items: center;
   text-align: center;
 }
+
+/* Убираем полосы и отступы у заголовка внутри слайдов-блоков */
+.slide-highlight h1 {
+  border: none;
+  margin-top: 0;
+  padding-bottom: 0;
+}
