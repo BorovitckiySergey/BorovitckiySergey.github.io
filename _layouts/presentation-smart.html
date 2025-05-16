@@ -47,9 +47,9 @@
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 1.2rem;
+      gap: 2rem;
       z-index: 10;
-      background: none;
+      background: rgba(0, 0, 0, 0.4);
       padding: 0.5rem 1rem;
       border-radius: 0.75rem;
     }
@@ -91,7 +91,13 @@
         scroll-behavior: smooth;
       }
     }
-  </style>
+  
+@media (max-width: 768px) {
+  section {
+    opacity: 1 !important;
+  }
+}
+</style>
 </head>
 <body>
   <div class="slide-container" id="slideContainer">
@@ -115,9 +121,9 @@
   </div>
 
   <div class="nav-panel">
-    <button onclick="navigateSlide(-1)">&lt;</button>
+    <button onclick="navigateSlide(-1)">←</button>
     <span id="slide-indicator">1 / 1</span>
-    <button onclick="navigateSlide(1)">&gt;</button>
+    <button onclick="navigateSlide(1)">→</button>
   </div>
 
   <script>
