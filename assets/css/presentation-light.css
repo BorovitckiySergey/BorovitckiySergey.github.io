@@ -31,3 +31,10 @@ blockquote {
 .nav-buttons button:hover {
   background: rgba(0, 0, 0, 0.1);
 }
+#slide-indicator {
+  background: rgba(0, 0, 0, 0.05);
+  color: #111;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.6rem;
+}
