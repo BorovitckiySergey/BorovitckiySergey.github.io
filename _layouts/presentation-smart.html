@@ -47,9 +47,9 @@
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.2rem;
       z-index: 10;
-      background: rgba(0, 0, 0, 0.4);
+      background: none;
       padding: 0.5rem 1rem;
       border-radius: 0.75rem;
     }
@@ -121,9 +121,9 @@
   </div>
 
   <div class="nav-panel">
-    <button onclick="navigateSlide(-1)">←</button>
+    <button onclick="navigateSlide(-1)">&lt;</button>
     <span id="slide-indicator">1 / 1</span>
-    <button onclick="navigateSlide(1)">→</button>
+    <button onclick="navigateSlide(1)">&gt;</button>
   </div>
 
   <script>
@@ -139,7 +139,7 @@
     }
 
     function navigateSlide(direction) {
-      if (isScrolling || window.innerWidth <= 768) return;
+      if (isScrolling) return;
       const nextIndex = Math.max(0, Math.min(sections.length - 1, currentIndex + direction));
       if (nextIndex !== currentIndex) {
         isScrolling = true;
@@ -151,7 +151,6 @@
     }
 
     window.addEventListener('wheel', (e) => {
-      if (window.innerWidth <= 768) return;
       if (e.deltaY > 30) {
         e.preventDefault();
         navigateSlide(1);
@@ -162,7 +161,6 @@
     }, { passive: false });
 
     window.addEventListener('keydown', (e) => {
-      if (window.innerWidth <= 768) return;
       const tag = document.activeElement.tagName.toLowerCase();
       if (tag === 'input' || tag === 'textarea') return;
       if (["ArrowDown", "PageDown", "ArrowRight", " "].includes(e.key)) {
