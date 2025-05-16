@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Презентации/Презентация для компании по аренде электровелосипедов.md",
+                "file": "Templates/Цитата с плашкой сверху.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Презентация для компании по аренде электровелосипедов"
+              "title": "Цитата с плашкой сверху"
+            }
+          },
+          {
+            "id": "154fb6f47f8026a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,27 +183,29 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "d87f1ee3cb87f12b",
+  "active": "154fb6f47f8026a7",
   "lastOpenFiles": [
+    "pages/psy-ai-guide.md",
+    "pages/Презентации/Презентация для компании по аренде электровелосипедов.md",
+    "Templates/Вставить кнопку.md",
+    "_site/assets/css/chat.css",
+    "assets/css/chat.css",
+    "assets/css/chat.css.crdownload",
+    "_includes/chat-style.html",
+    "_includes/Неподтверждено 325072.crdownload",
+    "_site/Templates/Вставить кнопку.md",
+    "_site/Templates/Без названия.md",
+    "Templates/Цитата с плашкой сверху.md",
+    "index.md",
     "_layouts/Неподтверждено 21223.crdownload",
     "_layouts/Неподтверждено 295633.crdownload",
     "assets/css/presentation-dark.css.crdownload",
     "_layouts/Неподтверждено 48132.crdownload",
     "_layouts/Неподтверждено 428406.crdownload",
-    "_layouts/Неподтверждено 557926.crdownload",
-    "_layouts/Неподтверждено 911609.crdownload",
-    "_layouts/Неподтверждено 554147.crdownload",
-    "_layouts/Неподтверждено 153536.crdownload",
-    "Презентации/Преза 3.md",
-    "Презентации/Презентация для компании по аренде электровелосипедов.md",
-    "Презентации/Презентация для компании.md",
-    "_layouts/Неподтверждено 743540.crdownload",
-    "_layouts/Неподтверждено 784236.crdownload",
-    "Templates/Цитата с плашкой сверху.md",
-    "index.md",
+    "pages/Презентации/Преза 3.md",
+    "pages/Презентации/Презентация для компании.md",
     "pages/Лид-магниты/Подписная для психологов.md",
     "Templates/Свойство лендинга.md",
-    "pages/psy-ai-guide.md",
     "_site/assets/images/deepres.png",
     "_site/deepres.png",
     "_site/Pasted image 20250513224918.png",
@@ -199,7 +216,6 @@
     "Презентации/Преза 2.md",
     "Templates/Вставить изображение.md",
     "_site/Templates/Вставить изображение.md",
-    "_site/Templates/Без названия.md",
     "_site/Templates/Цитата с плашкой сверху.md",
     "pages/lead-magnet.md",
     "pages/test-lead.md",

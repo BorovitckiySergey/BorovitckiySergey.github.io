@@ -1,0 +1,59 @@
+/* Чат — пользователь и ответ ChatGPT */
+.user, .ai {
+  max-width: 720px;
+  margin: 0 auto 2rem auto;
+  padding: 0;
+}
+
+/* Пузырь пользователя */
+.user {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user > * {
+  background-color: #303030;
+  color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  max-width: 75%;
+  line-height: 1.5;
+  font-size: 15px;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Ответ ChatGPT */
+.ai {
+  display: block;
+  margin-top: 1rem;
+}
+
+.ai > * {
+  color: #e8e8e8;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: normal;
+}
+
+/* Дополнительные элементы Markdown */
+.ai h1 {
+  font-size: 28px;
+  margin: 1em 0 0.6em;
+}
+
+.ai h2 {
+  font-size: 20px;
+  margin: 1em 0 0.6em;
+}
+
+.ai ul {
+  line-height: 1.9;
+  margin: 0 0 1.5em 1.2em;
+  padding: 0;
+}
+
+.ai li {
+  margin: 0;
+}
