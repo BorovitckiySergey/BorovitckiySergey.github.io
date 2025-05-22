@@ -1,0 +1,58 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/editorial/editorial.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/editorial/fontawesome-all.min.css' | relative_url }}" />
+</head>
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper" class="sidebar-left">
+
+    <!-- Sidebar -->
+    <section id="sidebar" class="inactive">
+      <div class="inner">
+        <nav>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Главная</a></li>
+            <li><a href="{{ '/about' | relative_url }}">О проекте</a></li>
+            <li><a href="{{ '/courses' | relative_url }}">Курсы</a></li>
+            <li><a href="{{ '/blog' | relative_url }}">Блог</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="#sidebar" class="toggle"></a>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
+        <header>
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+        </header>
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <p>&copy; {{ site.title }}. Все права защищены.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/editorial/jquery.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/editorial/browser.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/editorial/breakpoints.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/editorial/util.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/editorial/main.js' | relative_url }}"></script>
+</body>
+</html>

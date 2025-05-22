@@ -8,17 +8,6 @@ local_url: http://localhost:4000/
 # Привет, я Сергей Боровицкий
 
 
-
-<div class="video-block">
-  <iframe src="https://vk.com/video_ext.php?oid=94751416&id=456239046&hd=2&autoplay=1"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-          frameborder="0"
-          allowfullscreen
-          loading="lazy">
-  </iframe>
-</div>
-
-
 Я маркетолог и продюсер экспертов. С 2018 года помогаю психологам, коучам и специалистам помогающих профессий запускать онлайн-курсы и системно продвигать свои услуги.
 
 Моя цель — чтобы каждый эксперт, который действительно хочет менять жизни, смог уверенно продвигаться в интернете, не теряя себя, своих ценностей и своей уникальности.

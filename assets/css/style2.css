@@ -1,0 +1,259 @@
+/* 0. ЖИДКАЯ ТИПОГРАФИКА */
+html {
+  font-size: 1rem; /* 16px */
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* 1. Цвета и базовые переменные */
+:root {
+  --white: #fff;
+  --gray-light: #f9f9f9;
+  --gray-dark: #222;
+  --gray-text: #333;
+  --accent: #d35400;
+  --accent-dark: #e67e22;
+
+  --font-base: 1rem;
+  --scale: 1.25;
+  --space: 1rem;
+}
+
+/* 2. Вычисленные размеры заголовков */
+:root {
+  --h4: var(--font-base);
+  --h3: calc(var(--h4) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h1: calc(var(--h2) * var(--scale));
+}
+
+/* 3. Сброс и базовые стили */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: var(--font-base);
+  line-height: 1.6;
+  color: var(--gray-text);
+  background: var(--white);
+  padding: 0; /* убрали 20px */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 4. Контейнер */
+.container,
+main {
+  width: 100%;
+  padding: var(--space); /* вместо body-padding */
+  background: var(--white);
+}
+@media (min-width: 900px) {
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* 5. Заголовки */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--gray-dark);
+  line-height: 1.2;
+  margin-bottom: var(--space);
+}
+h1 {
+  font-size: var(--h1);
+  margin-top: calc(var(--space) * 2);
+  border-bottom: 1px solid var(--gray-dark);
+  padding-bottom: 0.5em;
+}
+h2 {
+  font-size: var(--h2);
+  margin-top: calc(var(--space) * 1.5);
+}
+h3 {
+  font-size: var(--h3);
+  margin-top: calc(var(--space) * 1.2);
+}
+h4 {
+  font-size: var(--h4);
+}
+@media (min-width: 480px) {
+  h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+  h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+}
+
+/* 6. Параграфы и списки */
+p,
+li {
+  margin-bottom: calc(var(--space) * 1.2);
+}
+ul,
+ol {
+  padding-left: calc(var(--space) * 1.5);
+}
+
+/* 7. Изображения */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: calc(var(--space) * 1.5) 0;
+  border-radius: 0;
+}
+.img-caption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin: calc(var(--space) * -0.5) 0 calc(var(--space) * 1);
+}
+
+/* 8. Кнопки */
+.button {
+  display: inline-block;
+  padding: calc(var(--space) * 0.6) calc(var(--space) * 1.5);
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  margin: var(--space) 0;
+}
+.button:hover,
+.button:focus {
+  background: var(--accent-dark);
+}
+
+/* 9. Содержимое blockquote */
+blockquote {
+  margin: var(--space) 0;
+  padding: 0.5em 1em;
+  border-left: 2px solid var(--accent);
+  background: var(--gray-light);
+  font-style: italic;
+  color: var(--gray-dark);
+}
+blockquote p {
+  margin: 0;
+}
+
+/* 10. Layout: lead */
+.layout-lead .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: calc(var(--space) * 2);
+}
+.layout-lead h1,
+.layout-lead h2 {
+  font-family: 'Manrope', sans-serif;
+  border-bottom: 1px solid var(--gray-dark);
+  padding-bottom: 0.5em;
+}
+
+/* 11. Разворачиваемая «цитата» */
+.details-quote {
+  position: relative;
+  border-left: 2px solid var(--accent);
+  background: var(--gray-light);
+  margin: var(--space) 0;
+  overflow: hidden;
+}
+.details-quote summary {
+  list-style: none;
+  padding: var(--space);
+  cursor: pointer;
+}
+.details-quote summary::-webkit-details-marker {
+  display: none;
+}
+.details-quote .preview {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: var(--gray-dark);
+}
+.details-quote summary::after {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  bottom: 0.5rem;
+  right: 1rem;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.details-quote .full-text {
+  display: none;
+  padding: 0 1rem 1rem;
+  color: var(--gray-dark);
+}
+.details-quote[open] summary::after {
+  transform: rotate(-135deg);
+}
+.details-quote[open] .preview {
+  display: none;
+}
+.details-quote[open] .full-text {
+  display: block;
+}
+
+/* 12. Мобильные корректировки */
+@media (max-width: 768px) {
+  .container,
+  main {
+    padding: 0.5rem;
+  }
+  .details-quote {
+    margin: 0.5rem 0;
+  }
+  .details-quote summary {
+    padding: 0.5rem;
+  }
+  .details-quote .full-text {
+    padding: 0 0.5rem 0.5rem;
+  }
+}
+
+.video-block {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.video-block iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+
+
+
+
+

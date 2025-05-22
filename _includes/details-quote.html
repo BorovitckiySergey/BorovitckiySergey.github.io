@@ -1,0 +1,13 @@
+<details class="details-quote">
+  <summary>
+    <p class="preview">
+      {{ include.preview | markdownify | strip_html | truncate: 200 }}
+    </p>
+  </summary>
+  <div class="full-text">
+    <p class="continued-preview">
+      {{ include.preview | markdownify | strip }}
+    </p>
+    {{ include.content | markdownify }}
+  </div>
+</details>
