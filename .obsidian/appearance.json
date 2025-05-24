@@ -1,3 +1,7 @@
 {
-  "cssTheme": "Sanctum"
+  "cssTheme": "Sanctum",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "dark_theme"
+  ]
 }

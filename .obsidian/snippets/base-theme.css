@@ -1,0 +1,95 @@
+:root {
+  --my-text-color: #333;
+  --my-text-color-light: #999;
+  --my-bg-color: #f9f9f9;
+  --tab-border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Основной фон и текст */
+body,
+.workspace,
+.workspace-split,
+.mod-root,
+.mod-container,
+.view-content,
+.workspace-leaf-content,
+.side-dock,
+.workspace-tabs,
+.workspace-tab-header-container,
+.modal,
+.modal-content,
+.workspace-ribbon,
+.side-dock.mod-left,
+.side-dock.mod-left .workspace-tab-header-container,
+.side-dock.mod-left .workspace-tab-header,
+.side-dock.mod-left .workspace-tab-header-inner {
+  background-color: var(--my-bg-color) !important;
+  color: var(--my-text-color) !important;
+}
+
+/* Превью и редактор */
+.markdown-preview-view,
+.cm-s-obsidian,
+.cm-s-obsidian .cm-line,
+.cm-s-obsidian .HyperMD-header,
+.cm-s-obsidian .cm-formatting,
+.cm-s-obsidian .cm-variable,
+.cm-s-obsidian .cm-string,
+.cm-s-obsidian .cm-keyword,
+.cm-s-obsidian .cm-comment {
+  background-color: var(--my-bg-color) !important;
+  color: var(--my-text-color) !important;
+}
+
+/* Панель заголовка файла */
+.view-header {
+  background-color: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Статусная панель */
+.status-bar,
+.status-bar::before,
+.status-bar::after {
+  background-color: var(--my-bg-color) !important;
+  color: var(--my-text-color) !important;
+  border-top: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.status-bar::before,
+.status-bar::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Убираем последнюю нижнюю линию */
+.workspace-leaf-resize-handle {
+  background: none !important;
+  border: none !important;
+  height: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Общая очистка для светлой темы */
+.theme-light .workspace-leaf,
+.theme-light .workspace-tabs,
+.theme-light .workspace-sidebar,
+.theme-light .workspace-tab-header,
+.theme-light .status-bar,
+.theme-light .workspace-leaf-resize-handle {
+  border: none !important;
+  box-shadow: none !important;
+  background: var(--my-bg-color) !important;
+}
+=======================================
+
+/* Неактивные вкладки */
+.theme-light .workspace-tab-header {
+  background-color: var(--my-bg-color) !important;
+  color: var(--my-text-color-light) !important;
+  border-right: none !important;
+  border-bottom: 1px solid var(--tab-border-color) !important;
+  position: relative;
+}

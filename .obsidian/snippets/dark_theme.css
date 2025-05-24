@@ -1,0 +1,47 @@
+/* 🔹 Делаем текст в строке состояния менее ярким */
+.theme-dark .status-bar {
+    background-color: #212121 !important; /* Цвет заметки */
+    color: #b0b0b0 !important; /* Тусклый серый текст */
+}
+
+/* 🔹 Ослабляем цвет иконок в строке состояния */
+.theme-dark .status-bar .clickable-icon {
+    color: #8a8a8a !important; /* Более тёмный серый */
+}
+
+/* 🔹 Оставляем боковую панель в основном цвете темы */
+.theme-dark .workspace-sidebar {
+    background-color: #161616 !important; /* Основной цвет темы */
+    color: #ffffff !important;
+}
+
+/* 🔹 Закладка (выпуклая часть вкладки) остаётся светлой */
+.theme-dark .workspace-tab-header.is-active {
+    background-color: #212121 !important; /* Цвет как у заметки */
+    color: #ffffff !important;
+}
+
+/* 🔹 Шапка заметки тоже остаётся светлой */
+.theme-dark .workspace-split.mod-root {
+    background-color: #212121 !important;
+    color: #ffffff !important;
+}
+
+/* 🔹 Оставляем основные элементы */
+.theme-dark .workspace-leaf .view-header,
+.theme-dark .workspace-leaf .view-content,
+.theme-dark .markdown-source-view, 
+.theme-dark .markdown-preview-view {
+    background-color: #212121 !important; /* Цвет как у заметки */
+    color: #ffffff !important;
+}
+
+/* 🔹 Убираем границы и тени */
+.theme-dark .workspace-leaf,
+.theme-dark .workspace-tabs,
+.theme-dark .workspace-sidebar,
+.theme-dark .workspace-tab-header,
+.theme-dark .status-bar {
+    border: none !important;
+    box-shadow: none !important;
+}

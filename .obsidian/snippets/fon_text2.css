@@ -1,0 +1,80 @@
+/* Основной белый фон */
+.theme-light {
+  --background-primary: #ffffff !important; /* Чисто белый */
+  --background-primary-alt: #ffffff !important; /* Панели */
+  --background-secondary: #ffffff !important; /* Вторичный фон */
+  --background-modifier-border: rgba(0, 0, 0, 0.05) !important; /* Лёгкие границы */
+}
+
+/* Убираем все тени и линии */
+.workspace-leaf,
+.workspace-tabs,
+.workspace-split,
+.view-header,
+.nav-file-title,
+.nav-folder-title,
+.sidebar-toggle-button,
+.workspace-ribbon {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+}
+
+/* Делаем текст контрастным (чёрный/тёмно-серый) */
+.theme-light {
+  --text-normal: #333333 !important;
+  --text-muted: #555555 !important;
+  --text-faint: #888888 !important;
+}
+
+/* Закрашиваем все возможные элементы в белый */
+body,
+.workspace,
+.workspace-split.mod-root,
+.workspace-tabs .workspace-leaf,
+.markdown-preview-view,
+.markdown-source-view {
+  background-color: #ffffff !important;
+}
+
+
+/* ===== ОСНОВНОЙ ФОН ===== */
+.workspace-tabs .workspace-tab-header-container,
+.workspace-tab-header,
+.workspace-tab-header.is-active,
+.workspace-tab-header:hover {
+  background: #ffffff !important; /* Чистый белый */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== ТЕКСТ ВКЛАДОК ===== */
+/* Неактивные вкладки */
+.workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+  color: #aaaaaa !important; /* Серый текст */
+  opacity: 1 !important;
+}
+
+/* Активная вкладка */
+.workspace-tab-header.is-active .workspace-tab-header-inner {
+  color: #000000 !important; /* Чёрный текст */
+  font-weight: 500 !important;
+}
+
+/* ===== КНОПКА ЗАКРЫТИЯ ===== */
+.workspace-tab-header-inner-close-button {
+  color: #cccccc !important; /* Серая иконка */
+}
+.workspace-tab-header-inner-close-button:hover {
+  color: #ff6b6b !important; /* Красная при наведении */
+  background: transparent !important;
+}
+
+/* ===== ГАРАНТИРОВАННОЕ УДАЛЕНИЕ ЛИНИЙ ===== */
+.workspace-tab-header-container::after,
+.workspace-tab-header-container::before,
+.workspace-tab-header::after,
+.workspace-tab-header::before,
+.workspace-tabs.mod-stacked .workspace-tab-header {
+  border: none !important;
+}

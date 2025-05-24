@@ -1,0 +1,208 @@
+/* == ПЕРЕМЕННЫЕ == */
+:root {
+  --warm-white:       #FFFDFA !important;  /* ваш молочный белый */
+  --text-normal:      #333333 !important;  /* основной текст */
+  --text-muted:       #555555 !important;  /* второстепенный текст */
+  --text-faint:       #888888 !important;  /* самый блеклый текст */
+  --accent-h:         0 !important;
+  --accent-s:         0 !important;
+  --accent-l:         0.1 !important;      /* для подсветки Explorer */
+  --radius-s:         4px !important;
+  --size-2:           4px !important;
+  --size-3:           8px !important;
+}
+
+/* == ГЛОБАЛЬНАЯ ЗАЛИВКА == */
+.theme-light,
+.theme-light.sanctum-default-light,
+.theme-light.sanctum-contrast-light,
+.theme-light.sanctum-white {
+  --background:             var(--warm-white);
+  --background-primary:     var(--warm-white);
+  --background-primary-alt: var(--warm-white);
+  --background-secondary:   var(--warm-white);
+  --background-modifier-border: var(--warm-white);
+}
+
+/* == УБИРАЕМ ВСЕ БОРДЕРЫ И ТЕНИ == */
+.theme-light 
+  .workspace-leaf,
+.theme-light 
+  .workspace-tabs,
+.theme-light 
+  .workspace-split,
+.theme-light 
+  .view-header,
+.theme-light 
+  .nav-file-title,
+.theme-light 
+  .nav-folder-title,
+.theme-light 
+  .sidebar-toggle-button,
+.theme-light 
+  .workspace-ribbon,
+.theme-light 
+  .workspace-tab-header-container,
+.theme-light 
+  .workspace-tab-header,
+.theme-light 
+  .workspace-tab-header.is-active,
+.theme-light 
+  .workspace-tab-header:hover,
+.theme-light 
+  .workspace-leaf-resize-handle,
+.theme-light 
+  .status-bar {
+  background-color: var(--warm-white) !important;
+  border: none                   !important;
+  box-shadow: none               !important;
+}
+
+/* == ПСЕВДОЭЛЕМЕНТЫ == */
+.theme-light 
+  .workspace-tab-header-container::before,
+.theme-light 
+  .workspace-tab-header-container::after,
+.theme-light 
+  .workspace-tab-header::before,
+.theme-light 
+  .workspace-tab-header::after,
+.theme-light 
+  .workspace-tabs.mod-stacked .workspace-tab-header {
+  background-color: var(--warm-white) !important;
+  border: none                   !important;
+  box-shadow: none               !important;
+}
+
+/* == БАЗОВЫЕ ТЕКСТОВЫЕ ЦВЕТА == */
+.theme-light {
+  --text-normal: #333333 !important;
+  --text-muted:  #555555 !important;
+  --text-faint:  #888888 !important;
+}
+
+/* == КЛЮЧЕВЫЕ КОНТЕЙНЕРЫ == */
+.theme-light body,
+.theme-light .workspace,
+.theme-light .workspace-split.mod-root,
+.theme-light .workspace-tabs .workspace-leaf,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view {
+  background-color: var(--warm-white) !important;
+  color:            var(--text-normal) !important;
+}
+
+/* ========================================================================
+   1) Explorer (левый сайдбар)
+   ======================================================================== */
+/* — все записи бледнее, но ярче UI-иконок */
+.nav-file-title-content,
+.nav-folder-title-content {
+  color: var(--text-muted) !important;
+  padding-left: var(--size-2) !important;
+}
+
+/* — активный файл/папка: серый фон + насыщенный текст + без смещения */
+.nav-file-title.is-active .nav-file-title-content,
+.nav-folder-title.is-active .nav-folder-title-content {
+  background-color: rgba(var(--accent-h), var(--accent-s), var(--accent-l), 0.1) !important;
+  color:            var(--text-normal) !important;
+  border-radius:    var(--radius-s) !important;
+  margin:           0 var(--size-2) !important;
+  transform:        none !important;
+  margin-left:      0 !important;
+}
+
+/* — убираем прыжок/сдвиг текста при клике */
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  margin-left: 0 !important;
+  transform: none !important;
+}
+
+/* ========================================================================
+   2) UI-иконки (верхний тулбар, риббон, боковые кнопки)
+   ======================================================================== */
+/* — по умолч. все иконки бледные */
+.workspace-ribbon .clickable-icon,
+.sidebar-toggle-button,
+.mod-cta .clickable-icon,
+.view-header .view-header-action,
+.workspace-leaf .view-header-action {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* — активная кнопка (выбранный модуль) — насыщенная */
+.workspace-ribbon .workspace-ribbon-action.is-active .clickable-icon,
+.sidebar-toggle-button.is-active {
+  color: var(--text-normal) !important;
+}
+
+/* ========================================================================
+   3) Вкладки (верхняя панель)
+   ======================================================================== */
+/* — неактивные заголовки вкладок: блеклый текст */
+.theme-light .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+  color: var(--text-faint) !important;
+}
+
+/* — активная вкладка: короткая серая линия сверху, без скруглений */
+.theme-light .workspace-tab-header.is-active {
+  position: relative;
+  margin-bottom: -1px; /* чтобы линия упёрлась в контейнер */
+  background: var(--warm-white) !important;
+  border-top:    2px solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  z-index:       2;
+}
+=======
+/* ——————————————————————————————————————
+   Explorer: подсветка активной заметки
+   —————————————————————————————————————— */
+.theme-light .nav-file-title.is-active .nav-file-title-content,
+.theme-light .nav-folder-title.is-active .nav-folder-title-content {
+  /* лёгкий серый фон */
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  /* насыщенный основной цвет текста */
+  color: var(--text-normal) !important;
+}
+
+/* ——————————————————————————————————————
+   Explorer: подсветка активного файла/папки
+   —————————————————————————————————————— */
+.theme-light .workspace-leaf-content .nav-file-title.is-active > .nav-file-title-content,
+.theme-light .workspace-leaf-content .nav-folder-title.is-active > .nav-folder-title-content {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: var(--text-normal)                 !important;
+}
+
+/* сбрасываем любые смещения */
+.theme-light .workspace-leaf-content .nav-file-title.is-active,
+.theme-light .workspace-leaf-content .nav-folder-title.is-active {
+  margin-left: 0   !important;
+  transform: none !important;
+}
+/* ——————————————————————————————————————
+   Сбалансированная подсветка в Explorer
+   —————————————————————————————————————— */
+.theme-light .workspace-leaf-content .nav-file-title.is-active > .nav-file-title-content,
+.theme-light .workspace-leaf-content .nav-folder-title.is-active > .nav-folder-title-content {
+  display: inline-block !important;               /* оборачиваем текст по ширине содержимого */
+  padding: 4px var(--size-3) !important;          /* чуть больше пространства сверху/снизу и по бокам */
+  margin: 0 0 !important;                         /* сбрасываем любые смещения */
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-radius: var(--radius-s) !important;
+  color: var(--text-normal) !important;
+}
+
+===========
+/* == ВОССТАНАВЛИВАЕМ ГОРИЗОНТАЛЬНУЮ ЛИНИЮ == */
+.markdown-preview-view hr,
+.markdown-source-view .cm-hr {
+  border: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
+  height: 1px !important;
+  background: none !important;
+  margin: 1.5em 0 !important;
+}

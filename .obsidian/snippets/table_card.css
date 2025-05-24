@@ -1,0 +1,52 @@
+
+### 2. Добавьте в ваш `obsidian.css` стили для карточек:
+
+/* Контейнер Dataview таблицы */
+.dataview.table-view-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  border: none;
+}
+
+/* Стиль карточки */
+.dataview.table-view-table > tbody > tr {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--background-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+/* Эффект при наведении */
+.dataview.table-view-table > tbody > tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Стиль заголовка заметки */
+.dataview.table-view-table td:nth-child(1) {
+  font-weight: 600;
+  font-size: 1.1em;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+/* Стиль превью текста */
+.dataview.table-view-table td:nth-child(2) {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  color: var(--text-normal);
+  opacity: 0.9;
+  font-size: 0.95em;
+  line-height: 1.4;
+}

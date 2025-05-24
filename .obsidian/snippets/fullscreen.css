@@ -1,0 +1,64 @@
+/* 1. Скрыть глобальный тулбар (путь к файлу и кнопки Obsidian) */
+.workspace-header {
+  display: none !important;
+}
+
+/* 2. Скрыть «ribbon» (иконки слева/справа) */
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-right {
+  display: none !important;
+}
+
+/* 3. Скрыть боковые панели (Explorer, Outline и пр.) */
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  display: none !important;
+}
+
+/* Альтернативный вариант (если предыдущий не сработает) */
+.workspace-tab-header-container {
+  display: none !important;
+}
+
+/* 5. Скрыть панель заголовка самой заметки (файл и глазик) */
+.view-header {
+  display: none !important;
+}
+
+/* 6. Скрыть статус-бар внизу */
+.status-bar {
+  display: none !important;
+}
+
+/* 7. Заставить единственный оставшийся сплит «root» занять всё пространство */
+.workspace-split.mod-root {
+  grid-template-columns: 1fr !important;
+}
+/* Центрирование содержимого заметки */
+.markdown-source-view.mod-cm6 .cm-content, 
+.markdown-preview-view {
+  max-width: 800px; /* или любая другая удобная ширина */
+  margin: 0 auto !important;
+  padding: 20px;
+}
+/* Убираем лишние отступы в режиме редактирования */
+.cm-sizer {
+  padding: 0 !important;
+}
+
+/* Убираем отступы в режиме чтения */
+.markdown-preview-section {
+  padding: 0 !important;
+}
+/* Сдвигаем весь контент немного вправо */
+.cm-contentContainer {
+    transform: translateX(8px) !important;
+}
+
+.inline-title {
+    padding-left: 8px !important;
+    margin-left: 0 !important;
+    transform: translateX(0) !important;
+    position: relative;
+    left: 19px !important;  /* Дополнительный сдвиг, если нужно */
+}

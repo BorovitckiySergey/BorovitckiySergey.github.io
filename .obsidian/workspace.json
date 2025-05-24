@@ -41,16 +41,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/Лид-магниты/Подписная для психологов.md",
+                "file": "pages/Презентации/Преза 3.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Подписная для психологов"
+              "title": "Преза 3"
+            }
+          },
+          {
+            "id": "c7c69332a3bcc344",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pages/Презентации/День 2.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "День 2"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -197,19 +211,22 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "774dcd8e6f64b691",
+  "active": "c7c69332a3bcc344",
   "lastOpenFiles": [
+    "_site/vnedryaem-gpt2/index.html",
+    "_site/vnedryaem-gpt2",
     "pages/Презентации/Презентация для компании по аренде электровелосипедов.md",
-    "Запушить на GitHub.lnk",
-    "deploy-open — ярлык.lnk",
-    "Запустить локалку.lnk",
-    "serve-open — ярлык.lnk",
-    "_site/serve-open.bat",
-    "_site/deploy-open.bat",
-    "deploy-open.bat",
-    "serve-open.bat",
-    "_site/site-tools.zip",
-    "site-tools.zip",
+    "pages/Презентации/День 2.md",
+    "pages/Презентации/Преза 3.md",
+    "_site/vnedryaem-gpt/index.html",
+    "_site/vnedryaem-gpt",
+    "_site/pages/Презентации/Презентация для компании по аренде электровелосипедов.html",
+    "_site/pages/Презентации",
+    "_site/pages",
+    "_layouts/Неподтверждено 305704.crdownload",
+    "_layouts/presentation-smart-400.html",
+    "_layouts/presentation-smart-500.html",
+    "_layouts/Неподтверждено 988511.crdownload",
     "pages/Лид-магниты/Подписная для психологов.md",
     "index.md",
     "pages/Главная editorial.md",
@@ -226,7 +243,6 @@
     "Templates/Вставить кнопку.md",
     "_site/Templates/Вставить кнопку.md",
     "_site/Templates/Без названия.md",
-    "pages/Презентации/Преза 3.md",
     "pages/Презентации/Презентация для компании.md",
     "Templates/Свойство лендинга.md",
     "_site/assets/images/deepres.png",
@@ -242,7 +258,6 @@
     "pages/lead-magnet.md",
     "_site/pages/Лид-магниты/Без названия.md",
     "_pages/landing-psy.md",
-    "landing-psy.md",
-    "_site/Без названия.md"
+    "landing-psy.md"
   ]
 }

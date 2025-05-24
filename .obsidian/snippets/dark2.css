@@ -1,0 +1,121 @@
+/* ───── Sanctum Custom Dark Snippet ───── */
+
+/* == VARIABLES == */
+:root {
+  /* a bit lighter than #212121 for more “lift” */
+  --dark-bg:        #2c2c2c;
+  --dark-bg-alt:    #2f2f2f;
+  --dark-border:    rgba(255, 255, 255, 0.05);
+  --text-normal:    #e0e0e0;
+  --text-muted:     #9a9a9a;
+  --text-faint:     #6e6e6e;
+  --accent-line:    rgba(255,255,255,0.1);
+  --radius-s:       4px;
+  --space-s:        4px;
+  --space-m:        8px;
+}
+
+/* == GLOBAL BACKGROUNDS & TEXT == */
+.theme-dark,
+.theme-dark.sanctum-default-dark,
+.theme-dark.sanctum-contrast-dark,
+.theme-dark.sanctum-black {
+  /* base backgrounds */
+  --background-primary:     var(--dark-bg);
+  --background-primary-alt: var(--dark-bg);
+  --background-secondary:   var(--dark-bg-alt);
+  --background-modifier-border: var(--dark-border);
+
+  /* text */
+  --text-normal:  var(--text-normal);
+  --text-secondary: var(--text-muted);
+  --text-placeholder: var(--text-faint);
+}
+
+/* apply everywhere */
+.theme-dark body,
+.theme-dark .workspace,
+.theme-dark .workspace-split.mod-root,
+.theme-dark .workspace-leaf,
+.theme-dark .workspace-tabs,
+.theme-dark .workspace-tab-header-container,
+.theme-dark .workspace-sidebar,
+.theme-dark .workspace-ribbon,
+.theme-dark .view-header,
+.theme-dark .view-content,
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-source-view,
+.theme-dark .status-bar {
+  background-color: var(--background-primary) !important;
+  color:            var(--text-normal)    !important;
+  border: none    !important;
+  box-shadow: none !important;
+}
+
+/* == EXPLORER: files & folders == */
+/* all entries faint by default */
+.theme-dark .nav-file-title-content,
+.theme-dark .nav-folder-title-content {
+  color: var(--text-faint) !important;
+}
+
+/* active entry */
+.theme-dark .nav-file-title.is-active > .nav-file-title-content,
+.theme-dark .nav-folder-title.is-active > .nav-folder-title-content {
+  background-color: var(--accent-line) !important;
+  color:            var(--text-normal) !important;
+  border-radius:    var(--radius-s)   !important;
+  margin:           0 var(--space-s) !important;
+  padding:          var(--space-s) var(--space-m) !important;
+  transform:        none !important;
+}
+
+/* no indent shift on click */
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active {
+  margin-left: 0 !important;
+}
+
+/* == TABS == */
+/* container bottom border */
+.theme-dark .workspace-tab-header-container {
+  border-bottom: 1px solid var(--dark-border) !important;
+}
+
+/* inactive tabs */
+.theme-dark .workspace-tab-header {
+  background: var(--background-primary) !important;
+  color:      var(--text-faint)      !important;
+}
+
+/* active tab: short top line */
+.theme-dark .workspace-tab-header.is-active {
+  position: relative;
+  background: var(--background-primary) !important;
+  color:      var(--text-normal) !important;
+  border-top: 1px solid var(--accent-line) !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  margin-bottom: -1px;
+  z-index: 2;
+}
+
+/* tab text contrast */
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+  color: var(--text-normal) !important;
+}
+
+/* == STATUS BAR & CONTROLS == */
+/* icons & buttons faint */
+.theme-dark .status-bar .clickable-icon,
+.theme-dark .workspace-ribbon .clickable-icon,
+.theme-dark .sidebar-toggle-button,
+.theme-dark .view-header-action {
+  color: var(--text-faint) !important;
+}
+
+/* active ribbon/module button bright */
+.theme-dark .workspace-ribbon .workspace-ribbon-action.is-active .clickable-icon,
+.theme-dark .sidebar-toggle-button.is-active {
+  color: var(--text-normal) !important;
+}

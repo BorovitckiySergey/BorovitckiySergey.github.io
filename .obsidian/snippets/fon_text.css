@@ -1,0 +1,30 @@
+:root {
+  /* Тёплый белый (нейтральный) */
+  --warm-white: 255, 253, 250;    /* основной фон */
+  --warm-white-light: 255, 255, 255;  /* для панелей */
+  --warm-white-dark: 245, 243, 240;   /* для границ */
+}
+
+.theme-light {
+  --background: rgb(var(--warm-white));  /* основной фон */
+  --layer-1: rgb(var(--warm-white-light));  /* панели, карточки */
+  --layer-2: rgb(var(--warm-white));  /* вторичный фон */
+  --background-modifier-border: rgba(var(--warm-white-dark), 0.3);  /* границы */
+}
+
+
+/* Жёсткое переопределение для HR */
+.markdown-preview-view hr,
+.cm-line .cm-hr,
+.cm-hr {
+  all: unset !important;
+  display: block !important;
+  height: 1px !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+  margin: 2em 0 !important;
+  width: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+

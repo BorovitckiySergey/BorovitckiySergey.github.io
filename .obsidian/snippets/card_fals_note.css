@@ -1,0 +1,69 @@
+
+> **Как это работает:**  
+> - Для каждой заметки создаём `<div>`-карточку, в которой:  
+>   1. Ссылка на саму заметку.  
+>   2. Первые 200 символов или пометка `(пусто)`.  
+>   3. Если заметка пуста — кнопка «Удалить», которая через Obsidian API (`app.vault.delete`) убирает файл и обновляет представление.  
+> - Вам нужен лишь плагин Dataview и включённые **Enable JavaScript queries** в настройках.
+
+---
+
+## 2. CSS-сниппет для красивой сетки карточек
+
+Создайте файл `.obsidian/snippets/dv-cards.css` и включите его в **Settings → Appearance → CSS snippets**:
+
+
+/* Контейнер карточек */
+.dv-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Сама карточка */
+.dv-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.dv-card {
+  background: var(--background-modifier-card);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-elevation-low);
+  display: flex;
+  flex-direction: column;
+}
+
+.dv-card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: var(--text-normal);
+}
+
+.dv-card-preview {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: pre-wrap;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.dv-card-delete {
+  align-self: flex-end;
+  padding: 0.2rem 0.6rem;
+  border: none;
+  background: var(--interactive-critical);
+  color: var(--interactive-critical-text);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.dv-card-delete:hover {
+  background: var(--interactive-critical-hover);
+}

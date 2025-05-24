@@ -1,0 +1,46 @@
+/* Кастомный стиль только для выносок с типом none */
+.callout[data-callout="none"] {
+  background-color: #e3eff0;       /* Пастельный фон */
+  border-left: 1px solid #5a9ca4;  /* Цвет рамки слева */
+  border-radius: 0px;              /* Прямые углы */
+  padding: 12px 16px;              /* Отступы */
+}
+
+/* Заголовок в выноске none */
+.callout[data-callout="none"] .callout-title {
+  font-weight: 600;
+  color: #33666c;
+}
+
+.callout[data-callout="note"] {
+  background-color: hsla(24.4, 90.8%, 61.8%, 0.06); /* очень прозрачный слой */
+  border-left: 2px solid var(--orange-40);
+  border-radius: 0px;
+  padding: 12px 16px;
+}
+
+.callout[data-callout="note"] .callout-title {
+  font-weight: 600;
+  color: hsl(24.4, 90.8%, 41%);
+}
+
+.callout[data-callout="note"] .callout-icon {
+  display: none !important;
+}
+
+.callout[data-callout="note"] .callout-title::before {
+  content: "📝";
+  margin-right: 8px;
+  color: var(--orange-40);
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+blockquote {
+  border-left: 2px solid #ccc; /* или var(--text-color-light) */
+  padding-left: 1em;
+  margin: 1.5em 0;
+  font-style: italic;
+  background: transparent;
+  color: #444;
+}
