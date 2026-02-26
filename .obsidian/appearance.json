@@ -1,7 +1,6 @@
 {
-  "cssTheme": "Sanctum",
+  "cssTheme": "Minimal",
   "theme": "obsidian",
-  "enabledCssSnippets": [
-    "dark_theme"
-  ]
+  "enabledCssSnippets": [],
+  "accentColor": "#ff780a"
 }
