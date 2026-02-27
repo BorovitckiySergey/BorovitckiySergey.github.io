@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/lead-magnet.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "lead-magnet"
+              "title": "index"
             }
           }
         ]
@@ -169,9 +169,19 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "956ef01e659607cb",
+  "active": "22262bbd472086f8",
   "lastOpenFiles": [
     "_site/opora.html",
+    "opora.html",
+    "_site/var32.html",
+    "var32.html",
+    "_site/index.html",
+    "_site/index.md",
+    "_site/assets/images/var32.html",
+    "assets/images/var32.html",
+    "pages/lead-magnet.md",
+    "_site/your-photo.jpg",
+    "your-photo.jpg",
     "_site/product-hero.jpg",
     "product-hero.jpg",
     "_site/var31.html",
@@ -182,30 +192,21 @@
     "index.md",
     "Templates/Свойство лендинга.md",
     "Templates/Цитата с плашкой сверху.md",
-    "pages/lead-magnet.md",
     "pages/test-lead.md",
     "_site/pages/opora/index.html",
     "_site/pages/opora",
-    "_site/pages",
-    "opora.html",
-    "opora.html",
-    "pages/opora",
     "pages/Главная editorial.md",
     "pages/Презентации/День 2.md",
     "pages/Лид-магниты/Подписная для психологов.md",
     "pages/Презентации/Презентация для компании по аренде электровелосипедов.md",
     "pages/Презентации/Презентация для компании.md",
     "pages/Презентации/Преза 3.md",
-    "_layouts/Неподтверждено 774463.crdownload",
-    "_site/assets/flexor/vendor/swiper/swiper-bundle.min.js.map",
     "_site/assets/flexor/img/testimonials/testimonials-5.jpg",
     "_site/assets/flexor/img/testimonials/testimonials-4.jpg",
     "_site/assets/flexor/img/testimonials/testimonials-3.jpg",
     "_site/assets/flexor/img/testimonials/testimonials-2.jpg",
     "_site/assets/flexor/img/testimonials/testimonials-1.jpg",
     "_site/assets/flexor/img/testimonials-bg.jpg",
-    "_site/assets/flexor/img/team/team-4.jpg",
-    "_site/assets/flexor/img/team/team-3.jpg",
     "_site/pages/sales/Без названия.md",
     "_site/Без названия.md",
     "Templates/Вставить кнопку.md",
@@ -215,7 +216,6 @@
     "_site/Презентации/Без названия.md",
     "Презентации/Преза 2.md",
     "Templates/Вставить изображение.md",
-    "_site/Templates/Вставить изображение.md",
-    "_site/Templates/Цитата с плашкой сверху.md"
+    "_site/Templates/Вставить изображение.md"
   ]
 }
