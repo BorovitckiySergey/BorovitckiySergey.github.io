@@ -45,9 +45,7 @@
     .reveal { opacity: 0; transform: translateY(20px); transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     .reveal.active { opacity: 1; transform: translateY(0); }
     .serif-italic { font-family: 'Merriweather', serif; font-style: italic; }
-    .line-accent { height: 1px; background: #e7e5e4; width: 60px; margin: 2rem 0; }
     
-    /* FAQ Styles */
     summary::-webkit-details-marker { display: none; }
     summary { list-style: none; cursor: pointer; outline: none; }
     details[open] summary svg { transform: rotate(180deg); }
@@ -190,18 +188,48 @@
     </div>
   </section>
 
-  <section class="py-32">
+  <section id="enough" class="py-48 bg-stone-100">
     <div class="site-container">
-      <div class="text-center reveal mb-24">
-        <h2 class="font-serif text-4xl md:text-5xl mb-6 italic">Это достаточно</h2>
-        <p class="text-stone-500 max-w-xl mx-auto font-light">Этот сайт — не финальная точка. Это опора. Позже его можно развивать, дополнять, усиливать. Но сейчас — достаточно ясной страницы, которая выполняет свою функцию.</p>
+      <div class="text-center reveal">
+        <h2 class="font-serif text-4xl md:text-5xl mb-8 italic text-stone-800">Это достаточно</h2>
+        <div class="max-w-xl mx-auto">
+          <p class="text-stone-500 font-light leading-relaxed mb-6">
+            Этот сайт — не финальная точка. Это опора. Позже его можно развивать, дополнять, усиливать.
+          </p>
+          <p class="text-stone-800 font-light leading-relaxed">
+            Но сейчас — достаточно ясной страницы, которая выполняет свою функцию.
+          </p>
+        </div>
+        <div class="w-16 h-px bg-stone-200 mx-auto mt-20"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 bg-white">
+    <div class="site-container">
+      <div class="max-w-3xl mx-auto mb-32 reveal">
+        <h2 class="font-serif text-3xl mb-12">Что вы получаете через 3 дня</h2>
+        <div class="space-y-6 text-stone-600 font-light">
+          <p class="text-lg text-stone-800">Это не «просто сайт». Через 3 дня у вас будет:</p>
+          <ul class="space-y-4">
+            <li class="flex gap-4"><span>—</span> страница, куда можно спокойно дать ссылку без неловкости;</li>
+            <li class="flex gap-4"><span>—</span> место, где формат и стоимость уже озвучены;</li>
+            <li class="flex gap-4"><span>—</span> ясная точка входа для новых клиентов;</li>
+            <li class="flex gap-4"><span>—</span> снижение количества объяснений в переписке;</li>
+            <li class="flex gap-4"><span>—</span> ощущение: «я присутствую в онлайне».</li>
+          </ul>
+          <div class="pt-8 border-t border-stone-100">
+            <p class="mb-4">Сайт берёт на себя объяснение. Вы остаётесь в работе.</p>
+            <p class="italic font-serif text-stone-900">Это не маркетинговый проект. Это опора.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-white border border-stone-200 p-12 md:p-20 reveal">
+      <div id="pricing" class="bg-white border border-stone-200 p-12 md:p-20 reveal">
         <h2 class="font-serif text-3xl md:text-4xl mb-4">Минималистичный сайт для психолога за 3 дня</h2>
         <p class="text-stone-400 uppercase tracking-widest text-[10px] mb-16">Спокойная страница‑присутствие на вашем домене</p>
         
-        <div class="grid md:grid-cols-2 gap-16 mb-20">
+        <div class="grid md:grid-cols-2 gap-16 mb-16">
           <div>
             <h3 class="font-serif text-xl mb-8">Формат работы</h3>
             <div class="space-y-6">
@@ -223,18 +251,56 @@
               </div>
             </div>
           </div>
-          <div class="bg-stone-50 p-10">
-            <h3 class="font-serif text-xl mb-8">Что входит</h3>
-            <ul class="space-y-4 text-stone-500 text-sm font-light">
-              <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> одностраничный сайт</li>
-              <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> адаптация под мобильные устройства</li>
-              <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> помощь с формулировками</li>
-              <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> настройка кнопки записи</li>
-              <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> передача доступа</li>
-            </ul>
+          <div class="bg-stone-50 p-10 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-xl mb-8">Что входит</h3>
+              <ul class="space-y-4 text-stone-500 text-sm font-light">
+                <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> одностраничный сайт</li>
+                <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> адаптация под мобильные устройства</li>
+                <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> помощь с формулировками</li>
+                <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> настройка кнопки записи</li>
+                <li class="flex items-center gap-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> передача доступа</li>
+              </ul>
+            </div>
             <div class="mt-12 pt-8 border-t border-stone-200">
               <div class="text-2xl font-serif text-stone-900 mb-2">10 000 ₽</div>
               <div class="text-[10px] uppercase tracking-widest text-stone-400">Без скрытых условий</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mb-24">
+          <p class="text-stone-500 font-light mb-8 italic text-sm">Если этот формат откликается вам как подходящий — давайте начнем.</p>
+          <a target="_blank" href="https://t.me/SergeyBorovitckiy?text=Здравствуйте,%20я%20по%20поводу%20сайта" class="inline-block bg-stone-900 text-white px-12 py-5 rounded-full text-[10px] uppercase tracking-[0.3em] hover:bg-stone-700 active:scale-95 shadow-lg">
+              Обсудить свою страницу
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 border-t border-stone-100 pt-16">
+          <div class="reveal">
+            <h3 class="font-serif text-xl mb-6">Почему такая цена</h3>
+            <div class="text-stone-600 font-light text-sm space-y-4 leading-relaxed">
+              <p>Этот формат изначально задуман как простой и фиксированный. Здесь нет индивидуального дизайна, сложной разработки или этапа бесконечного выбора.</p>
+              <ul class="space-y-2 text-stone-500">
+                <li>— одна выверенная структура</li>
+                <li>— спокойный минимализм</li>
+                <li>— индивидуальная работа с формулировками</li>
+                <li>— сборка и передача готового сайта</li>
+              </ul>
+              <p class="pt-4 border-t border-stone-50">Именно поэтому стоимость — <span class="font-medium text-stone-900">10 000 ₽.</span></p>
+            </div>
+          </div>
+          
+          <div class="reveal" style="transition-delay: 100ms">
+            <h3 class="font-serif text-xl mb-6 italic">Сейчас беру 3 проекта</h3>
+            <div class="text-stone-600 font-light text-sm space-y-6 leading-relaxed">
+              <p>Сейчас я тестирую этот формат как отдельный продукт. Беру 3 проекта по текущей цене. После этого стоимость будет пересмотрена или формат изменится.</p>
+              <p>Если вам важно сделать опору сейчас — лучше не откладывать.</p>
+              
+              <div class="mt-10 p-6 bg-stone-50 border-l-2 border-stone-200">
+                <p class="text-stone-900 font-medium mb-2">Как мы понимаем, что формат подходит?</p>
+                <p class="text-stone-500">Перед началом мы проводим короткую встречу. Если станет понятно, что нужен другой формат — мы честно это обсудим. В работу включён один круг правок по тексту: мы доводим страницу до согласованного состояния.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -262,19 +328,58 @@
     </div>
   </section>
 
-  <section class="py-32 border-t border-stone-100">
+  <section class="py-32 border-t border-stone-100 bg-stone-50/30">
     <div class="site-container">
-      <div class="grid lg:grid-cols-12 gap-16 items-center">
-        <div class="lg:col-span-5 reveal">
-          <div class="aspect-square bg-stone-100 rounded-full overflow-hidden grayscale-[0.5] hover:grayscale-0 transition-all duration-700">
-            <img src="your-photo.jpg" alt="Автор" class="w-full h-full object-cover">
+      <div class="grid lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-4 reveal">
+          <div class="aspect-[4/5] bg-stone-100 border border-stone-200/40 overflow-hidden grayscale-[0.5] hover:grayscale-0 transition-all duration-700 shadow-sm">
+            <img src="your-photo.jpg" alt="Сергей" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="lg:col-span-7 reveal">
-          <h2 class="font-serif text-3xl mb-8">Обо мне</h2>
-          <div class="space-y-6 text-stone-600 font-light leading-relaxed">
-            <p>Я создаю инструменты, которые не требуют от вас быть кем-то другим. В мире, перегруженном шумом, я помогаю найти форму для тишины и профессионализма.</p>
-            <p>Моя задача — чтобы ваш сайт стал не «проектом на полгода», а реальной опорой уже через 3 дня.</p>
+
+        <div class="lg:col-span-8 reveal">
+          <h2 class="font-serif text-3xl mb-10 text-stone-800">Обо мне</h2>
+
+          <div class="space-y-6 text-stone-600 font-light leading-relaxed text-lg">
+
+            <p>Меня зовут Сергей. Более 20 лет я работаю в маркетинге.</p>
+
+            <p>Я начинал в найме и довольно быстро вырос до позиции коммерческого директора производственной компании с оборотом более 1 млрд рублей в год. Позже 10 лет развивал собственный бизнес. Затем вернулся в маркетинг уже в роли продюсера и стратега.</p>
+
+            <p>
+              Я делал запуски, строил автоворонки, тестировал десятки форматов продвижения. 
+              Работал с холодным трафиком, вебинарами, марафонами, системами привлечения.
+            </p>
+
+            <p class="mt-6">
+              И за это время убедился в одном:
+            </p>
+
+            <div class="my-8 pl-6 border-l-2 border-stone-200">
+              <div class="space-y-2">
+                <p class="font-serif italic text-stone-900 text-xl leading-relaxed">
+                  работают не фишки и эффекты.
+                </p>
+                <p class="font-serif italic text-stone-900 text-xl leading-relaxed">
+                  работают ясность и смыслы.
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Когда человеку понятно, кто вы, с чем работаете и как устроена ваша работа — продажи не нужно «дожимать». 
+              И сайт-опора вырос из этой логики.
+            </p>
+
+            <p class="uppercase tracking-widest text-[11px] text-stone-400 font-medium">
+              Это не маркетинговый трюк. <br>
+              Это форма ясности.
+            </p>
+
+            <p class="pt-6 border-t border-stone-200 text-stone-500 text-base">
+              Я живу в Ярославле, работаю онлайн и ценю возможность строить проекты без шума — так, чтобы оставалось место для семьи и жизни.
+            </p>
+
           </div>
         </div>
       </div>
@@ -283,19 +388,36 @@
 
   <section id="cta" class="py-32 bg-stone-900 text-stone-50 border-t border-stone-200">
     <div class="site-container text-center reveal">
-      <h2 class="font-serif text-3xl md:text-4xl mb-8">Для кого это подойдёт</h2>
-      <p class="text-stone-400 font-light mb-16 text-lg">
-        Если вам важно присутствовать в онлайне без давления,
-        можно начать с простой точки опоры.
-        <br><br>
-        Обращайтесь — и мы вместе создадим ваш сайт
-        как спокойную основу вашей профессиональной работы.
+      <h2 class="font-serif text-3xl md:text-4xl mb-6">Если вам нужна точка опоры</h2>
+      <p class="text-stone-400 font-light mb-12 text-lg">
+        Если вам важно иметь своё место в онлайне — <br>
+        где о вас сказано ясно и связно.
       </p>
       
+      <div class="max-w-xl mx-auto mb-16">
+        <p class="text-stone-400 mb-6 font-light uppercase tracking-widest text-[11px]">Где собраны:</p>
+        <div class="space-y-3 text-stone-300 font-light italic text-lg mb-10">
+          <p>— кто вы и с чем работаете;</p>
+          <p>— формат и стоимость;</p>
+          <p>— как записаться.</p>
+        </div>
+        <p class="text-stone-400 font-light mb-8">Без лишнего. Без ощущения, что нужно постоянно что-то поддерживать.</p>
+        <div class="py-8 border-y border-stone-800">
+          <p class="text-stone-200 font-serif text-xl md:text-2xl leading-relaxed">
+            Тогда следующим шагом может стать <br>
+            <span class="text-white italic">ваш собственный сайт — простой, ясный и устойчивый.</span>
+          </p>
+        </div>
+      </div>
+
       <div class="max-w-2xl mx-auto">
-        <h3 class="font-serif text-2xl mb-10">Записаться</h3>
+        <p class="text-stone-500 text-sm font-light mb-10">
+          По этой цене и в этом формате доступны только 3 проекта. <br>
+          Дальше условия могут измениться. <br>
+          Если вам это нужно сейчас — напишите.
+        </p>
         <a target="_blank" href="https://t.me/SergeyBorovitckiy?text=Здравствуйте,%20я%20по%20поводу%20сайта" class="inline-block bg-stone-50 text-stone-900 px-16 py-6 rounded-full text-[10px] uppercase tracking-[0.3em] hover:bg-stone-200 active:scale-95 shadow-xl shadow-stone-800">
-          Написать в Telegram
+          Обсудить свою страницу
         </a>
       </div>
     </div>
@@ -306,7 +428,6 @@
       <h2 class="font-serif text-3xl md:text-4xl mb-16">Частые вопросы</h2>
 
       <div class="space-y-4">
-
         <details class="group border-b border-stone-200 pb-4">
           <summary class="flex justify-between items-center py-4 text-stone-900">
             <span class="font-serif text-xl italic leading-tight">
@@ -393,8 +514,9 @@
       </p>
 
       <div class="mt-10">
-        <a href="#cta" class="text-stone-500 hover:text-stone-900 font-light underline underline-offset-4">
-          Вернуться к записи
+        <a target="_blank" href="https://t.me/SergeyBorovitckiy?text=Здравствуйте,%20я%20по%20поводу%20сайта" class="text-stone-500 hover:text-stone-900 font-light underline underline-offset-4 flex items-center gap-2">
+            Написать в Telegram
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
         </a>
       </div>
     </div>
