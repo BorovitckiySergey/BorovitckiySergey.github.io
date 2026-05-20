@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ДВОЕ — Курс сценического взаимодействия</title>
+  <title>ДВОЕ — Курс партнёрского взаимодействия на сцене и в жизни</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600&display=swap');
     :root{--bg:#f2f1ee;--paper:#ebe9e4;--text:#2d2d2a;--soft:#62625d;--muted:#8b8b84;--line:rgba(45,45,42,.18);--line2:rgba(45,45,42,.38);--dark:#111110;--serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -20,7 +20,7 @@
     .section{padding:clamp(92px,10vw,180px) clamp(24px,5vw,96px);border-top:1px solid var(--line)}.inner{max-width:1520px;margin:0 auto}.two-col{display:grid;grid-template-columns:minmax(0,34%) minmax(0,58%);gap:clamp(64px,9vw,168px);align-items:start}.title{font-family:var(--serif);font-size:clamp(56px,6.2vw,118px);line-height:.92;font-weight:300;letter-spacing:-.055em}.title.small{font-size:clamp(44px,4.7vw,88px)}.lead{font-size:clamp(25px,2.1vw,42px);line-height:1.38;color:#3f3f3b;max-width:920px}.copy{font-size:clamp(18px,1.22vw,22px);line-height:1.78;color:#42423e;max-width:760px}.copy p+p{margin-top:1.2em}.copy strong{font-weight:500;color:var(--text)}.space{height:clamp(56px,7vw,112px)}.rule{height:1px;background:var(--line);margin:clamp(42px,5vw,72px) 0}
     .problem{padding-top:clamp(110px,11vw,190px)}.problem-grid{display:grid;grid-template-columns:minmax(0,48%) minmax(0,40%);gap:clamp(56px,8vw,132px);align-items:end}.thoughts{display:grid;gap:18px;padding-bottom:clamp(8px,2vw,40px)}.thought{font-family:var(--serif);font-style:italic;font-size:clamp(27px,2.55vw,52px);line-height:1.1;color:rgba(45,45,42,.56);letter-spacing:-.02em}.thought:nth-child(2){margin-left:13%}.thought:nth-child(3){margin-left:4%;color:rgba(45,45,42,.72)}.micro{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;margin-top:clamp(36px,4vw,62px);max-width:760px}.micro span{border-top:1px solid var(--line);padding-top:14px;font-size:clamp(15px,1vw,18px);line-height:1.45;color:var(--soft)}
     .pause{min-height:62vh;display:flex;align-items:center;border-top:0}.pause-text{max-width:1100px;font-family:var(--serif);font-size:clamp(64px,8vw,148px);font-weight:300;line-height:.92;letter-spacing:-.065em}.scene-lines{margin-top:clamp(28px,3.4vw,56px);display:grid;gap:12px}.scene-lines span{font-family:var(--serif);font-size:clamp(30px,3vw,58px);line-height:1.05;font-weight:300;letter-spacing:-.035em;color:#3f3f3b}
-    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:clamp(56px,6vw,104px)}.process-item{min-height:210px;padding:clamp(24px,2.6vw,44px);border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:32px}.num{font-size:12px;letter-spacing:.28em;color:var(--muted)}.process-text{font-size:clamp(19px,1.35vw,25px);line-height:1.35}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:clamp(56px,6vw,104px)}.process-item{min-height:210px;padding:clamp(24px,2.6vw,44px);border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-start;gap:24px}.num{font-size:12px;letter-spacing:.28em;color:var(--muted)}.process-text{font-size:clamp(19px,1.35vw,25px);line-height:1.35}
     .experience{background:#e9e7e1}.experience-copy{max-width:1060px;margin-left:auto;font-size:clamp(25px,2.1vw,42px);line-height:1.48;color:#373733}.experience-copy p+p{margin-top:1.05em}.experience-copy em{font-family:var(--serif);font-weight:300;font-style:italic;color:#64645e}
     .change-list{display:grid;grid-template-columns:repeat(2,1fr);margin-top:clamp(50px,5vw,90px);border-top:1px solid var(--line);border-left:1px solid var(--line)}.change-item{min-height:112px;padding:22px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:clamp(18px,1.18vw,22px);line-height:1.48;color:#3e3e3a}
     .dark{background:var(--dark);color:#f2f1ee;border-top:0}.dark .title,.dark .lead,.dark .copy{color:#f2f1ee}.dark .kicker{color:rgba(242,241,238,.56)}.atmos-grid{display:grid;grid-template-columns:minmax(0,52%) minmax(0,38%);gap:clamp(56px,8vw,132px);align-items:end}.words{display:flex;flex-wrap:wrap;gap:12px}.words span{border:1px solid rgba(242,241,238,.18);padding:12px 16px;color:rgba(242,241,238,.72);font-size:15px;letter-spacing:.08em}
@@ -38,29 +38,278 @@
       <header class="hero-top"><div class="brand">Йогалето</div><div>2026</div></header>
       <div class="hero-main">
         <div class="hero-content">
-          <div class="eyebrow">Курс сценического взаимодействия</div>
+          <div class="eyebrow">Курс партнёрского взаимодействия на сцене и в жизни</div>
           <h1 class="hero-title">ДВОЕ</h1>
-          <p class="hero-subtitle"><span class="hero-subtitle-primary">Быть свободнее в контакте с другим</span><span class="hero-subtitle-secondary">— через сцену, импровизацию и внимание друг к другу.</span></p>
-          <a href="#application" class="cta">Записаться</a>
+          <p class="hero-subtitle"><span class="hero-subtitle-primary">Быть свободнее в контакте с другим</span><span class="hero-subtitle-secondary"> — через сцену, импровизацию и внимание друг к другу.</span></p>
+          <a href="#application" class="cta">Записаться на курс</a>
         </div>
         <figure class="hero-image-wrap"><img src="dvoe.png" alt="Момент настоящего взаимодействия" class="hero-image"><figcaption class="image-caption">presence / contact</figcaption></figure>
       </div>
     </section>
 
     <main>
-      <section class="section problem"><div class="inner problem-grid"><div><div class="kicker">Состояние</div><div class="space"></div><h2 class="title">Ты наверняка знаешь это состояние</h2><div class="rule"></div><div class="copy"><p>Может быть, внешне это даже не всегда заметно. Ты можешь нормально разговаривать, шутить, поддерживать общение.</p><p>Но внутри всё равно остаётся ощущение, будто часть тебя всё время напряжена и следит за собой.</p><p>Когда рядом появляется другой человек и внимание направлено на тебя — что-то внутри меняется.</p></div><div class="micro"><span>отвести взгляд</span><span>быстрее закончить фразу</span><span>заранее придумать «правильный» ответ</span><span>не выглядеть странно</span></div></div><div class="thoughts"><div class="thought">«Как я сейчас выгляжу?»</div><div class="thought">«Нормально ли я сказал?»</div><div class="thought">«Что обо мне думают?»</div></div></div></section>
-      <section class="section pause"><div class="inner"><p class="pause-text">И пока ты думаешь — момент уже уходит.</p></div></section>
-      <section class="section"><div class="inner two-col"><div><div class="kicker">Метод</div><div class="space"></div><h2 class="title">Почему сцена?</h2></div><div><p class="lead">Сцена — это место, где привычные реакции становятся особенно заметны.</p><div class="scene-lines"><span>Когда на тебя смотрят.</span><span>Когда рядом партнёр.</span><span>Когда невозможно спрятаться за заготовкой.</span></div><div class="rule"></div><div class="copy"><p>Именно поэтому сценическое взаимодействие так сильно связано с обычной жизнью. Потому что в жизни происходит то же самое. Только обычно мы этого даже не замечаем.</p><p>На курсе мы используем сцену как безопасное пространство, где можно увидеть свои привычные реакции, попробовать действовать по-другому и начать действительно слышать другого человека.</p><p><strong>Не через «правильную игру».</strong> А через внимание, импульс, живую реакцию и присутствие в моменте.</p></div></div></div></section>
-      <section class="section"><div class="inner"><div class="two-col"><div><div class="kicker">Практика</div><div class="space"></div><h2 class="title small">Что будет происходить</h2></div><p class="lead">Это не театральная школа в классическом смысле. И не психологическая терапия.</p></div><div class="process-grid"><article class="process-item"><div class="num">01</div><div class="process-text">Упражнения на внимание и контакт</div></article><article class="process-item"><div class="num">02</div><div class="process-text">Сценическое взаимодействие в парах</div></article><article class="process-item"><div class="num">03</div><div class="process-text">Импровизация без заготовки</div></article><article class="process-item"><div class="num">04</div><div class="process-text">Работа с реакцией в моменте</div></article><article class="process-item"><div class="num">05</div><div class="process-text">Упражнения на взгляд, внимание и присутствие</div></article><article class="process-item"><div class="num">06</div><div class="process-text">Настоящее взаимодействие вместо попытки «сыграть правильно»</div></article></div></div></section>
-      <section class="section experience"><div class="inner"><div class="kicker">Опыт процесса</div><div class="space"></div><div class="experience-copy"><p>Момент, когда ты перестаёшь судорожно искать правильную реакцию.</p><p>Когда вместо внутреннего контроля появляется интерес к другому человеку.</p><p>Когда можно смотреть человеку в глаза и не проваливаться в себя.</p><p>Когда ты выходишь в сцену без заготовки. Не знаешь заранее, что скажешь через десять секунд. Теряешься. Смеёшься. Импровизируешь.</p><p>И вдруг замечаешь, что взаимодействие не развалилось.</p><p><em>«Ух ты. А я так могу?»</em></p></div></div></section>
-      <section class="section"><div class="inner"><div class="two-col"><div><div class="kicker">Изменения</div><div class="space"></div><h2 class="title small">Что может измениться</h2></div><p class="lead">В какой-то момент ты замечаешь, что рядом с другим человеком можно не только напрягаться.</p></div><div class="change-list"><div class="change-item">Легче выдерживать взгляд другого человека</div><div class="change-item">Проще вступать в разговор, не дожидаясь «идеального момента»</div><div class="change-item">Меньше зависать в голове, когда разговор идёт не по плану</div><div class="change-item">Меньше следить за каждым своим словом</div><div class="change-item">Легче импровизировать вместо попытки всё заранее просчитать</div><div class="change-item">Больше свободы и игры рядом с людьми</div></div></div></section>
-      <section class="section dark"><div class="inner atmos-grid"><div><div class="kicker">Атмосфера</div><div class="space"></div><h2 class="title">Это не место, где нужно выглядеть правильно.</h2></div><div><p class="lead">Здесь можно пробовать, ошибаться, смеяться, тупить, импровизировать, удивляться себе.</p><div class="rule"></div><div class="words"><span>без оценки</span><span>без конкуренции</span><span>маленькая группа</span><span>совместный опыт</span><span>живое внимание</span></div></div></div></section>
-      <section class="section"><div class="inner fit-grid"><div class="fit-card"><h3>Может откликнуться</h3><ul class="plain-list"><li>тем, кто слишком много контролирует себя рядом с другими</li><li>тем, кто хочет свободнее проявляться в общении</li><li>тем, кто устал жить «через голову»</li><li>тем, кому интересны сцена, импровизация и живое взаимодействие</li><li>тем, кто скучает по игре, творчеству и спонтанности</li></ul></div><div class="fit-card"><h3>Может не подойти</h3><ul class="plain-list"><li>тем, кто ищет жёсткий тренинг навыков общения</li><li>тем, кому нужны быстрые схемы и техники влияния</li><li>тем, кто хочет «правильно играть роль уверенного человека»</li></ul></div></div></section>
-      <section class="section"><div class="inner"><div class="two-col"><div><div class="kicker">Формат</div><div class="space"></div><h2 class="title small">Как устроен курс</h2></div><div class="copy"><p>Опыт в театре не нужен.</p><p>Главное — готовность присутствовать, пробовать и быть в процессе.</p></div></div><div class="facts"><div class="fact"><strong>8</strong><span>занятий</span></div><div class="fact"><strong>группа</strong><span>небольшой состав и внимание к процессу</span></div><div class="fact"><strong>пары</strong><span>взаимодействие и мини-сцены</span></div><div class="fact"><strong>без</strong><span>необходимости иметь театральный опыт</span></div><div class="fact"><strong>без</strong><span>оценки и «правильного исполнения»</span></div></div></div></section>
-      <section class="section"><div class="inner two-col"><div><div class="kicker">Ведущие</div><div class="space"></div><h2 class="title small">Для нас сцена — это не только театр.</h2></div><div class="copy leaders-copy"><p>Это пространство, где человек может заметить, как он реагирует рядом с другими, где начинает играть роль, где теряет живость — и где появляется настоящий контакт.</p><p>Мы не учим «быть актёром». Нам интересно живое взаимодействие, внимание, импровизация и возможность быть собой рядом с другим человеком.</p></div></div></section>
-      <section class="section testimonials"><div class="inner"><div class="kicker">Голоса участников</div><div class="testimonial-grid"><article class="testimonial"><p>«Я впервые заметил, насколько сильно контролирую себя рядом с другими людьми.»</p></article><article class="testimonial"><p>«В какой-то момент я перестал думать, как выгляжу, и просто начал реагировать.»</p></article><article class="testimonial"><p>«Было ощущение, будто я снова начал чувствовать момент, а не только анализировать его.»</p></article><article class="testimonial"><p>«Не ожидал, что сценические упражнения так сильно связаны с обычной жизнью.»</p></article></div></div></section>
-      <section class="section final-emotion"><div class="inner"><p class="quote-large">Возможно, ты не станешь другим человеком за 8 занятий. Но у тебя может появиться другой опыт.</p></div></section>
-      <section class="section application-section" id="application"><div class="inner application-grid"><div><div class="kicker">Попробовать этот опыт</div><div class="space"></div><h2 class="title small">Если тебе интересно прожить такой опыт — оставь заявку.</h2><a href="#" class="cta">Оставить заявку</a></div><div class="application-facts"><span>Небольшая группа</span><span>8 занятий</span><span>Сценическое взаимодействие, импровизация и практика контакта</span><span>Без необходимости иметь театральный опыт</span><span>Старт новой группы — [дата]</span></div></div></section>
+      <section class="section problem">
+        <div class="inner problem-grid">
+          <div>
+            <div class="kicker">Состояние</div><div class="space"></div>
+            <h2 class="title">Ты наверняка знаешь это состояние</h2>
+            <div class="rule"></div>
+            <div class="copy">
+              <p>Большую часть времени в общении люди сосредоточены не на другом человеке, а на себе. Из-за этого контакт часто становится менее живым. Мы вроде бы разговариваем друг с другом, но по-настоящему не слышим и не замечаем человека рядом.</p>
+              <p>Особенно это чувствуется в ситуациях, где невозможно заранее всё просчитать:</p>
+            </div>
+            <div class="micro">
+              <span>рядом с незнакомыми людьми</span>
+              <span>под вниманием группы</span>
+              <span>в публичности</span>
+              <span>в конфликте</span>
+              <span>рядом со значимыми для нас</span>
+              <span>когда нужно реагировать прямо сейчас</span>
+            </div>
+          </div>
+          <div class="thoughts">
+            <div class="thought">«Как я выгляжу со стороны?»</div>
+            <div class="thought">«Что мне сказать дальше?»</div>
+            <div class="thought">«Как не показаться странным?»</div>
+            <div class="thought" style="color: rgba(45,45,42,.72); margin-left: 13%;">«Какое впечатление я произвожу?»</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pause">
+        <div class="inner">
+          <p class="pause-text">Вместо живой реакции появляется слишком много контроля.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner two-col">
+          <div>
+            <div class="kicker">Метод</div><div class="space"></div>
+            <h2 class="title">Почему сцена?</h2>
+          </div>
+          <div>
+            <p class="lead">Сцена — это место, где привычные реакции становятся особенно заметны.</p>
+            <div class="scene-lines">
+              <span>Когда рядом партнёр.</span>
+              <span>Когда на тебя смотрят.</span>
+              <span>Когда невозможно спрятаться за заготовкой.</span>
+              <span>Когда нужно реагировать прямо сейчас.</span>
+            </div>
+            <div class="rule"></div>
+            <div class="copy">
+              <p>Именно в такие моменты становится видно, как сильно мы пытаемся всё контролировать, как уходим в голову вместо контакта, и как начинаем играть роль вместо живой реакции.</p>
+              <p>Поэтому сценическое взаимодействие так сильно связано с обычной жизнью. На курсе мы используем сцену как пространство, где можно постепенно стать свободнее в контакте с другим человеком. <strong>Не через «правильную игру».</strong> А через внимание, взаимодействие, импровизацию и живую реакцию.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="two-col">
+            <div>
+              <div class="kicker">Основа</div><div class="space"></div>
+              <h2 class="title small">О чём этот курс</h2>
+            </div>
+            <div>
+              <p class="lead">В центре курса — партнёрское взаимодействие. Умение не просто говорить рядом с другим человеком, а действительно быть с ним в контакте.</p>
+              <div class="copy" style="margin-top: 32px;">
+                <p>На курсе мы постепенно смещаем внимание с постоянного контроля — на партнёра, момент и сам процесс взаимодействия. В основе курса лежат три вещи:</p>
+              </div>
+            </div>
+          </div>
+          <div class="process-grid">
+            <article class="process-item">
+              <div class="num">01</div>
+              <h3 style="font-family:var(--serif); font-size:clamp(28px, 3vw, 42px); line-height: 1; font-weight:300; letter-spacing:-0.03em;">Видеть партнёра</h3>
+              <div class="copy" style="font-size: clamp(16px, 1.1vw, 18px); line-height: 1.5;"><p>Не только слушать слова. Но замечать реакцию, интонацию, изменение состояния и то, что происходит между вами прямо сейчас. Из этого внимания рождается настоящий контакт.</p></div>
+            </article>
+            <article class="process-item">
+              <div class="num">02</div>
+              <h3 style="font-family:var(--serif); font-size:clamp(28px, 3vw, 42px); line-height: 1; font-weight:300; letter-spacing:-0.03em;">Действовать без заготовки</h3>
+              <div class="copy" style="font-size: clamp(16px, 1.1vw, 18px); line-height: 1.5;"><p>Приходится реагировать в моменте, импровизировать, подхватывать партнёра и искать сцену прямо внутри взаимодействия. И постепенно вместо напряжения появляется свобода.</p></div>
+            </article>
+            <article class="process-item">
+              <div class="num">03</div>
+              <h3 style="font-family:var(--serif); font-size:clamp(28px, 3vw, 42px); line-height: 1; font-weight:300; letter-spacing:-0.03em;">Создавать вместе</h3>
+              <div class="copy" style="font-size: clamp(16px, 1.1vw, 18px); line-height: 1.5;"><p>Из импровизации начинают рождаться диалоги и сцены. Появляется ощущение живого взаимодействия, которое невозможно заранее придумать или полностью проконтролировать.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="two-col">
+            <div>
+              <div class="kicker">Программа курса</div><div class="space"></div>
+              <h2 class="title small">Что будет происходить</h2>
+            </div>
+            <div>
+              <p class="lead">Это не театральная школа и не психологическая терапия. Это пространство, где через сцену постепенно появляется больше живости.</p>
+              <div class="copy" style="margin-top: 24px;">
+                <p>Формат камерный: <strong>6 человек</strong> в группе и <strong>3 часа</strong> живой практики.</p>
+              </div>
+            </div>
+          </div>
+          <div class="process-grid">
+            <article class="process-item"><div class="num">01</div><div class="process-text">Упражнения на внимание и контакт</div></article>
+            <article class="process-item"><div class="num">02</div><div class="process-text">Сценическое взаимодействие в парах</div></article>
+            <article class="process-item"><div class="num">03</div><div class="process-text">Импровизация без заготовки</div></article>
+            <article class="process-item"><div class="num">04</div><div class="process-text">Работа с реакцией в моменте</div></article>
+            <article class="process-item"><div class="num">05</div><div class="process-text">Упражнения на взгляд, внимание и присутствие</div></article>
+            <article class="process-item"><div class="num">06</div><div class="process-text">Практика настоящего взаимодействия вместо попытки «сыграть правильно»</div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experience">
+        <div class="inner">
+          <div class="kicker">Опыт процесса</div><div class="space"></div>
+          <div class="experience-copy">
+            <p>Но главное — это само ощущение процесса.</p>
+            <p>Момент, когда вместо постоянного контроля появляется больше лёгкости, спонтанности и интереса к другому человеку.</p>
+            <p>Когда диалог начинает складываться сам. Когда можно смотреть человеку в глаза и не проваливаться в себя.</p>
+            <p>Когда ты выходишь в сцену без заготовки. Не знаешь заранее, что скажешь через десять секунд. Теряешься. Смеёшься. Импровизируешь.</p>
+            <p>И в какой-то момент уже сам не замечаешь, как речь начинает литься свободнее. Как между вами появляется что-то живое.</p>
+            <p><em>Сцена начинает складываться сама — местами смешно, местами неожиданно, а иногда действительно сильно.</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="inner atmos-grid">
+          <div>
+            <div class="kicker">Финал</div><div class="space"></div>
+            <h2 class="title">Снимаем фильм</h2>
+          </div>
+          <div>
+            <p class="lead">В финале курса группа создаёт короткий фильм.</p>
+            <div class="rule" style="background: rgba(242,241,238,.18);"></div>
+            <div class="copy">
+              <p>Мы вместе придумываем идею, собираем сцены, импровизируем, ищем живые взаимодействия между людьми и создаём общее творческое высказывание.</p>
+              <p>Для многих участников это становится одним из самых сильных переживаний курса. Потому что это уже не просто упражнения. А совместно прожитый опыт, который остаётся с группой и после завершения.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="two-col">
+            <div>
+              <div class="kicker">Изменения</div><div class="space"></div>
+              <h2 class="title small">Что может измениться</h2>
+            </div>
+            <p class="lead">В какой-то момент ты замечаешь, что рядом с другим человеком можно не только напрягаться.</p>
+          </div>
+          <div class="change-list">
+            <div class="change-item">Легче выдерживать взгляд другого человека</div>
+            <div class="change-item">Проще вступать в разговор</div>
+            <div class="change-item">Меньше зависать в голове</div>
+            <div class="change-item">Меньше страха сказать что-то «неидеально»</div>
+            <div class="change-item">Легче импровизировать вместо попытки всё заранее просчитать</div>
+            <div class="change-item">Больше свободы и спонтанности рядом с людьми</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:var(--paper); border-top:none;">
+        <div class="inner atmos-grid">
+          <div>
+            <div class="kicker">Атмосфера</div><div class="space"></div>
+            <h2 class="title">Это не место, где нужно выглядеть правильно.</h2>
+          </div>
+          <div>
+            <p class="lead">Курс строится не на конкуренции, а на внимании, взаимодействии и совместном опыте.</p>
+            <div class="rule"></div>
+            <div class="words">
+              <span style="border-color:var(--line2); color:var(--text);">пробовать</span>
+              <span style="border-color:var(--line2); color:var(--text);">ошибаться</span>
+              <span style="border-color:var(--line2); color:var(--text);">смеяться</span>
+              <span style="border-color:var(--line2); color:var(--text);">тупить</span>
+              <span style="border-color:var(--line2); color:var(--text);">импровизировать</span>
+              <span style="border-color:var(--line2); color:var(--text);">удивляться себе</span>
+              <span style="border-color:var(--line2); color:var(--text);">расслабляться</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner fit-grid" style="grid-template-columns: 1fr; max-width: 1020px; margin: 0 auto;">
+          <div class="fit-card" style="border-top: none;">
+            <h3 style="text-align: center;">Курс может откликнуться тем, кто:</h3>
+            <ul class="plain-list" style="margin-top: clamp(32px, 4vw, 56px);">
+              <li>хочет свободнее чувствовать себя рядом с людьми</li>
+              <li>интересуется сценой, импровизацией и живым взаимодействием</li>
+              <li>устал слишком сильно контролировать себя в общении</li>
+              <li>хочет больше спонтанности и лёгкости</li>
+              <li>скучает по ощущению игры, творчества и живого контакта</li>
+              <li>проходил первый курс и хочет пойти глубже — от проявления себя к взаимодействию с другим человеком</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="two-col">
+            <div>
+              <div class="kicker">Формат</div><div class="space"></div>
+              <h2 class="title small">Как устроен курс</h2>
+            </div>
+            <div class="copy">
+              <p>Опыт в театре не нужен.</p>
+              <p>Главное — готовность пробовать, взаимодействовать и быть в процессе.</p>
+            </div>
+          </div>
+          <div class="facts">
+            <div class="fact"><strong>8</strong><span>занятий</span></div>
+            <div class="fact"><strong>6</strong><span>человек в камерной группе</span></div>
+            <div class="fact"><strong>3</strong><span>часа живой практики за встречу</span></div>
+            <div class="fact"><strong>пары</strong><span>взаимодействие и мини-сцены</span></div>
+            <div class="fact"><strong>фильм</strong><span>совместное творчество в финале</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="inner">
+          <div class="kicker">Голоса участников</div>
+          <div class="testimonial-grid">
+            <article class="testimonial"><p>«Я впервые заметил, насколько сильно контролирую себя рядом с другими людьми.»</p></article>
+            <article class="testimonial"><p>«В какой-то момент я перестал думать, как выгляжу, и просто начал реагировать.»</p></article>
+            <article class="testimonial"><p>«Было ощущение, будто я снова начал чувствовать момент, а не только анализировать его.»</p></article>
+            <article class="testimonial"><p>«Не ожидал, что сценические упражнения так сильно связаны с обычной жизнью.»</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final-emotion">
+        <div class="inner">
+          <p class="quote-large">Возможно, ты не станешь другим человеком за 8 занятий. Но у тебя может появиться опыт настоящего взаимодействия.</p>
+        </div>
+      </section>
+
+      <section class="section application-section" id="application">
+        <div class="inner application-grid">
+          <div>
+            <div class="kicker">ДВОЕ</div><div class="space"></div>
+            <h2 class="title small" style="margin-bottom: 24px;">Курс партнёрского взаимодействия на сцене и в жизни</h2>
+            <p class="copy" style="margin-bottom: 42px; font-size: clamp(18px, 1.4vw, 24px); line-height: 1.4;">Научись свободнее взаимодействовать, импровизировать и быть живее рядом с другими людьми. Через сцену, внимание и совместный опыт.</p>
+            <a href="#" class="cta">Записаться на курс</a>
+          </div>
+          <div class="application-facts">
+            <span>8 занятий</span>
+            <span>6 человек в группе</span>
+            <span>Сценическое взаимодействие и импровизация</span>
+            <span>Совместный фильм в финале курса</span>
+            <span>Без необходимости иметь театральный опыт</span>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </body>
